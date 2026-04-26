@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ヒヨコタロット</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fff3f7;
+      text-align: center;
+      padding: 40px;
+      color: #5a3a3a;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 360px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px #ddd;
+    }
+    button {
+      background: #ffd86b;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐣ヒヨコタロット</h1>
+  <p>今日の一枚を引いてみてね</p>
+
+  <button onclick="drawCard()">カードを引く</button>
+
+  <div class="card">
+    <h2 id="cardName">まだ引いてないよ</h2>
+    <p id="message">ボタンを押してね🐣</p>
+  </div>
+
+  <script>
+const cards = [
+  {
+    name: "0 愚者",
+    upright: "新しい一歩。まずはやってみて",
+    reversed: "無計画すぎ注意。少し立ち止まって"
+  },
+  {
+    name: "1 魔術師",
+    upright: "才能を使うタイミング",
+    reversed: "自信不足かも。やれる力はあるよ"
+  }
+
+      ["2 女教皇", "静かに直感を信じて"],
+      ["3 女帝", "育つものを大切に"],
+      ["4 皇帝", "土台を整える日"],
+      ["5 教皇", "学びや助言がヒント"],
+      ["6 恋人", "心が選ぶ方へ"],
+      ["7 戦車", "勢いに乗って進もう"],
+      ["8 力", "やさしさが本当の強さ"],
+      ["9 隠者", "ひとり時間が答えをくれる"],
+      ["10 運命の輪", "流れが変わるタイミング"],
+      ["11 正義", "バランスを見直して"],
+      ["12 吊るされた男", "今は見方を変えるとき"],
+      ["13 死神", "終わりは新しい始まり"],
+      ["14 節制", "ちょうどいい加減を探して"],
+      ["15 悪魔", "執着に気づく日"],
+      ["16 塔", "崩れた先に本音が見える"],
+      ["17 星", "希望を忘れないで"],
+      ["18 月", "不安な夜ほど焦らずに"],
+      ["19 太陽", "明るく進んで大丈夫"],
+      ["20 審判", "もう一度チャンスが来る"],
+      ["21 世界", "ひとつの完成と祝福"]
+
+];      
+    ];
+
+function drawCard() {
+  const card = cards[Math.floor(Math.random() * cards.length)];
+  const isReversed = Math.random() < 0.5;
+
+  document.getElementById("cardName").textContent =
+    card.name + (isReversed ? "（逆位置）" : "（正位置）");
+
+  document.getElementById("message").textContent =
+    isReversed ? card.reversed : card.upright;
+}
+</script>
+</body>
+</html>
