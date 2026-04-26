@@ -41,52 +41,41 @@
   </div>
 
   <script>
-const cards = [
-  {
-    name: "0 愚者",
-    upright: "新しい一歩。まずはやってみて",
-    reversed: "無計画すぎ注意。少し立ち止まって"
-  },
-  {
-    name: "1 魔術師",
-    upright: "才能を使うタイミング",
-    reversed: "自信不足かも。やれる力はあるよ"
-  }
-
-      ["2 女教皇", "静かに直感を信じて"],
-      ["3 女帝", "育つものを大切に"],
-      ["4 皇帝", "土台を整える日"],
-      ["5 教皇", "学びや助言がヒント"],
-      ["6 恋人", "心が選ぶ方へ"],
-      ["7 戦車", "勢いに乗って進もう"],
-      ["8 力", "やさしさが本当の強さ"],
-      ["9 隠者", "ひとり時間が答えをくれる"],
-      ["10 運命の輪", "流れが変わるタイミング"],
-      ["11 正義", "バランスを見直して"],
-      ["12 吊るされた男", "今は見方を変えるとき"],
-      ["13 死神", "終わりは新しい始まり"],
-      ["14 節制", "ちょうどいい加減を探して"],
-      ["15 悪魔", "執着に気づく日"],
-      ["16 塔", "崩れた先に本音が見える"],
-      ["17 星", "希望を忘れないで"],
-      ["18 月", "不安な夜ほど焦らずに"],
-      ["19 太陽", "明るく進んで大丈夫"],
-      ["20 審判", "もう一度チャンスが来る"],
-      ["21 世界", "ひとつの完成と祝福"]
-
-];      
+    const cards = [
+      { name: "0 愚者", upright: "新しい一歩。完璧じゃなくていいよ", reversed: "少し無計画かも。今日は足元を確認してね" },
+      { name: "1 魔術師", upright: "才能を使うタイミング", reversed: "自信不足かも。できることから始めよう" },
+      { name: "2 女教皇", upright: "静かに直感を信じて", reversed: "考えすぎ注意。情報を整理してみて" },
+      { name: "3 女帝", upright: "育つものを大切に", reversed: "甘やかしすぎ注意。境界線も大事" },
+      { name: "4 皇帝", upright: "土台を整える日", reversed: "力みすぎかも。肩の力を抜いて" },
+      { name: "5 教皇", upright: "学びや助言がヒント", reversed: "常識に縛られすぎないで" },
+      { name: "6 恋人", upright: "心が選ぶ方へ", reversed: "迷いが出やすい日。焦って決めなくてOK" },
+      { name: "7 戦車", upright: "勢いに乗って進もう", reversed: "暴走注意。方向を確認してから進もう" },
+      { name: "8 力", upright: "やさしさが本当の強さ", reversed: "無理に強がらなくて大丈夫" },
+      { name: "9 隠者", upright: "ひとり時間が答えをくれる", reversed: "閉じこもりすぎ注意。少し外の声も聞いて" },
+      { name: "10 運命の輪", upright: "流れが変わるタイミング", reversed: "今は流れ待ち。焦らず整えて" },
+      { name: "11 正義", upright: "バランスを見直して", reversed: "偏りに注意。公平な目で見てみよう" },
+      { name: "12 吊るされた男", upright: "見方を変えるとき", reversed: "我慢しすぎかも。抜け道を探して" },
+      { name: "13 死神", upright: "終わりは新しい始まり", reversed: "手放せないものを見直して" },
+      { name: "14 節制", upright: "ちょうどいい加減を探して", reversed: "バランスが乱れ気味。休憩も大事" },
+      { name: "15 悪魔", upright: "執着に気づく日", reversed: "抜け出すきっかけが見えてきそう" },
+      { name: "16 塔", upright: "崩れた先に本音が見える", reversed: "小さな違和感を放置しないで" },
+      { name: "17 星", upright: "希望を忘れないで", reversed: "理想が遠く見える日。でも消えてないよ" },
+      { name: "18 月", upright: "不安な夜ほど焦らずに", reversed: "少しずつ霧が晴れてきそう" },
+      { name: "19 太陽", upright: "明るく進んで大丈夫", reversed: "楽しむ余裕を取り戻して" },
+      { name: "20 審判", upright: "もう一度チャンスが来る", reversed: "過去を責めすぎないで" },
+      { name: "21 世界", upright: "ひとつの完成と祝福", reversed: "あと少し。仕上げを丁寧に" }
     ];
 
-function drawCard() {
-  const card = cards[Math.floor(Math.random() * cards.length)];
-  const isReversed = Math.random() < 0.5;
+    function drawCard() {
+      const card = cards[Math.floor(Math.random() * cards.length)];
+      const isReversed = Math.random() < 0.5;
 
-  document.getElementById("cardName").textContent =
-    card.name + (isReversed ? "（逆位置）" : "（正位置）");
+      document.getElementById("cardName").textContent =
+        card.name + (isReversed ? "（逆位置）" : "（正位置）");
 
-  document.getElementById("message").textContent =
-    isReversed ? card.reversed : card.upright;
-}
-</script>
+      document.getElementById("message").textContent =
+        isReversed ? card.reversed : card.upright;
+    }
+  </script>
 </body>
 </html>
