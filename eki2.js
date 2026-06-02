@@ -15,8 +15,10 @@ function lineType(n) {
 }
 
 function lineSymbol(n) {
-  if (n === 6 || n === 8) return "-- --";
-  if (n === 7 || n === 9) return "-----";
+  if (n === 6) return "6 -- --";
+  if (n === 7) return "7 -----";
+    if  (n === 8) return "8 -- --";
+    if (n === 9) return "9 -----";
 }
 
 function isChanging(n) {
