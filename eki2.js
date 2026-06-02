@@ -7,12 +7,24 @@ function drawLine() {
   return 9;                       // 3/16
 }
 
+function lineSymbol(n) {
+  if (n === 6 || n === 8) return "-- --";
+  if (n === 7 || n === 9) return "-----";
+}
+
 function drawHexagram() {
   const lines = [];
 
   for(let i = 0; i < 6; i++) {
     lines.push(drawLine());
   }
+
+  let result = "";
+
+  for(let i = 5; i >= 0; i--) {
+    result += lineSymbol(lines[i]) + "\n";
+  }
+
 
   document.getElementById("result").textContent =
     lines.join(", ");
