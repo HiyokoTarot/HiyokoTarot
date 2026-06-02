@@ -1,38 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>ヒヨコ易</title>
+    <meta charset="UTF-8">
+    <title>ヒヨコ易</title>
+
+    <link rel="stylesheet" href="eki2.css">
 </head>
 <body>
 
-<button onclick="drawHexagram()">
-卦を立てる
-</button>
+    <h1>ヒヨコ易</h1>
 
-<pre id="result"></pre>
+    <button onclick="drawHexagram()">
+        卦を立てる
+    </button>
 
-<script>
-function drawLine() {
-  const r = Math.floor(Math.random() * 16) + 1;
+    <pre id="result"></pre>
 
-  if (r === 1) return 6;
-  if (r <= 6) return 7;
-  if (r <= 13) return 8;
-  return 9;
-}
-
-function drawHexagram() {
-  const lines = [];
-
-  for(let i=0;i<6;i++){
-    lines.push(drawLine());
-  }
-
-  document.getElementById("result").textContent =
-    lines.join(", ");
-}
-</script>
+    <script src="eki2.js"></script>
 
 </body>
 </html>
