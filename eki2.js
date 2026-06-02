@@ -32,12 +32,11 @@ function drawHexagram() {
 
   let result = "";
 
-  for(let i = 5; i >= 0; i--) {
-    result += lineSymbol(lines[i]) + "\n";
-  }
+for(let i = 5; i >= 0; i--) {
+  result += lineSymbol(lines[i])
+         + " "
+         + lineType(lines[i])
+         + "\n";  }
 
-  document.getElementById("result").textContent = result += lineSymbol(lines[i])
-       + " "
-       + lineType(lines[i])
-       + "\n";
+  document.getElementById("result").textContent = result;
 }
