@@ -73,7 +73,7 @@
       document.getElementById("cardName").textContent =
         card.name + (isReversed ? "（逆位置）" : "（正位置）");
 
-      document.getElementById("message").textContent =
+      document.getElementById("message").innerHTML =
         isReversed ? card.reversed : card.upright;
     }
   </script>
