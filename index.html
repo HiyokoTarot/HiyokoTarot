@@ -47,8 +47,12 @@ window.drawCard =  function () {
   const card = tarotCards[Math.floor(Math.random() * tarotCards.length)];
   const isReversed = Math.random() < 0.5;
 
-  document.getElementById("cardName").textContent =
-    card.name + (isReversed ? "（逆位置）" : "（正位置）");
+document.getElementById("cardImage").src =
+  "./tarot/" + card.image;
+
+document.getElementById("cardName").textContent =
+  `${card.number} ${card.emoji} ${card.name}` +
+  (isReversed ? "（逆位置）" : "（正位置）");
 
   document.getElementById("message").innerHTML =
     isReversed ? card.reversed : card.upright;
