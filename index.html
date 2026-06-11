@@ -40,22 +40,19 @@
     <p id="message">ボタンを押してね🐣</p>
   </div>
 
-  <script>
+  <script type="module">
+import { tarotCards } from "./logic/tarot.js";
 
-import { tarotCards } from ".logic/tarot.js";
+window.drawCard = function () {
+  const card = tarotCards[Math.floor(Math.random() * tarotCards.length)];
+  const isReversed = Math.random() < 0.5;
 
-function drawTarot() {
-  const cards = await loadTarot();
+  document.getElementById("cardName").textContent =
+    card.name + (isReversed ? "（逆位置）" : "（正位置）");
 
-  console.log(card.name);
-}
-
-      document.getElementById("cardName").textContent =
-        card.name + (isReversed ? "（逆位置）" : "（正位置）");
-
-      document.getElementById("message").innerHTML =
-        isReversed ? card.reversed : card.upright;
-    }
-  </script>
+  document.getElementById("message").innerHTML =
+    isReversed ? card.reversed : card.upright;
+};
+</script>
 </body>
 </html>
