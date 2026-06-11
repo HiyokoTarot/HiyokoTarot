@@ -43,7 +43,7 @@
   <script type="module">
 import { tarotCards } from "./logic/tarot.js";
 
-window.drawCard = function () {
+window.drawCard =  function () {
   const card = tarotCards[Math.floor(Math.random() * tarotCards.length)];
   const isReversed = Math.random() < 0.5;
 
