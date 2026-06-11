@@ -51,7 +51,7 @@ window.drawCard =  function () {
   const isReversed = Math.random() < 0.5;
 
 document.getElementById("cardImage").src =
-  "./tarot/" + card.image;
+   card.image;
 
 document.getElementById("cardName").textContent =
   `${card.number} ${card.emoji} ${card.name}` +
