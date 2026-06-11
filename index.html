@@ -52,6 +52,11 @@ window.drawCard =  function () {
 
 document.getElementById("cardImage").src =
    card.image;
+if (isReversed) {
+  img.style.transform = "rotate(180deg)";
+} else {
+  img.style.transform = "rotate(0deg)";
+}
 
 document.getElementById("cardName").textContent =
   `${card.number} ${card.emoji} ${card.name}` +
