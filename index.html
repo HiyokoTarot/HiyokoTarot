@@ -30,7 +30,7 @@
   </style>
 </head>
 <body>
-  <h1>🐣ヒヨコタロット</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
@@ -50,14 +50,13 @@ window.drawCard =  function () {
   const card = tarotCards[Math.floor(Math.random() * tarotCards.length)];
   const isReversed = Math.random() < 0.5;
 
-document.getElementById("cardImage").src =
-   card.image;
+const img = document.getElementById("cardImage");
+img.src = card.image;
 if (isReversed) {
   img.style.transform = "rotate(180deg)";
 } else {
   img.style.transform = "rotate(0deg)";
 }
-
 document.getElementById("cardName").textContent =
   `${card.number} ${card.emoji} ${card.name}` +
   (isReversed ? "（逆位置）" : "（正位置）");
