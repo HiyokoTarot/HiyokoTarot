@@ -11,14 +11,28 @@
       padding: 40px;
       color: #5a3a3a;
     }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 360px;
-      margin: 20px auto;
-      box-shadow: 0 4px 12px #ddd;
-    }
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 720px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px #ddd;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  text-align: left;
+}
+
+
+
+.card img {
+  width: 250px;
+  flex-shrink: 0;
+}
+
     button {
       background: #ffd86b;
       border: none;
@@ -30,7 +44,7 @@
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.0</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.1</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
