@@ -49,14 +49,14 @@
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.1</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.12</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
 
 <div id="result"></div>
 
-  <script type="module">
+<script type="module">
 import { tarotCards } from "./logic/tarot.js";
 
 window.drawCard = function () {
@@ -92,22 +92,6 @@ window.drawCard = function () {
   });
 
   document.getElementById("result").innerHTML = html;
-};
-
-const img = document.getElementById("cardImage");
-img.src = card.image;
-if (isReversed) {
-  img.style.transform = "rotate(180deg)";
-} else {
-  img.style.transform = "rotate(0deg)";
-}
-
-document.getElementById("cardName").textContent =
-  `${card.number} ${card.emoji} ${card.name}` +
-  (isReversed ? "（逆位置）" : "（正位置）");
-
-  document.getElementById("message").innerHTML =
-    isReversed ? card.reversed : card.upright;
 };
 </script>
 </body>
