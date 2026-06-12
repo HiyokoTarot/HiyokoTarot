@@ -1,0 +1,18 @@
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 720px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px #ddd;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  text-align: left;
+}
+
+.card img {
+  width: 250px;
+  flex-shrink: 0;
+}
