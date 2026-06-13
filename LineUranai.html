@@ -98,7 +98,7 @@
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.12</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.20</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
@@ -144,6 +144,8 @@ window.drawCard = function () {
 
   document.getElementById("result").innerHTML = html;
 
+drawRune();
+
 };
 
 
@@ -165,9 +167,7 @@ function drawRune() {
     </div>
   `;
 
-  document.getElementById("result").innerHTML = html;
-
-  drawRune();
+  document.getElementById("runeResult").innerHTML = html;
 };
 
 </script>
