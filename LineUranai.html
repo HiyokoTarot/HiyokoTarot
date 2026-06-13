@@ -46,6 +46,55 @@
   flex: 1;
 }
 
+    .rune-stone {
+      width: 190px;
+      height: 230px;
+      margin: 0 auto 22px;
+      border-radius: 48% 52% 46% 54% / 54% 46% 52% 48%;
+      background: linear-gradient(145deg, #fff8df, #e8d4a7 48%, #c8a96e);
+      box-shadow:
+        inset -14px -18px 26px rgba(96, 71, 30, 0.18),
+        inset 12px 12px 24px rgba(255, 255, 255, 0.75),
+        0 14px 28px rgba(74, 53, 86, 0.22);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.45s ease, box-shadow 0.45s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rune-stone::after {
+      content: "";
+      position: absolute;
+      width: 72%;
+      height: 42%;
+      top: 18%;
+      left: 12%;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      transform: rotate(-22deg);
+    }
+
+    .rune-stone.drawn {
+      transform: rotate(-2deg) scale(1.03);
+      box-shadow:
+        inset -14px -18px 26px rgba(96, 71, 30, 0.18),
+        inset 12px 12px 24px rgba(255, 255, 255, 0.75),
+        0 18px 38px rgba(74, 53, 86, 0.28);
+    }
+
+    .rune-symbol {
+      position: relative;
+      z-index: 1;
+      font-family: "Times New Roman", serif;
+      font-size: 86px;
+      color: #6f4d16;
+      text-shadow: 0 2px 0 rgba(255, 255, 255, 0.4);
+    }
+
+
+
   </style>
 </head>
 <body>
@@ -55,9 +104,11 @@
   <button onclick="drawCard()">カードを引く</button>
 
 <div id="result"></div>
+<div id="runeResult"></div>
 
 <script type="module">
 import { tarotCards } from "./logic/tarot.js";
+import { runes } from "./logic/rune.js";
 
 window.drawCard = function () {
   const positions = ["① 現状", "② 相手の気持ち", "③ 今後の流れ"];
@@ -92,7 +143,51 @@ window.drawCard = function () {
   });
 
   document.getElementById("result").innerHTML = html;
+
 };
+
+window.drawRune = function () {
+  const rune = runes[Math.floor(Math.random() * runes.length)];
+
+  const html = `
+    <div class="card">
+      <div style="font-size: 90px; width: 250px; text-align: center;">
+        ${rune.symbol}
+      </div>
+
+      <div class="cardText">
+        <h3>ᚱ 今すべきこと</h3>
+        <h2>${rune.name}</h2>
+        <p><strong>${rune.keyword}</strong></p>
+        <p>${rune.message}</p>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("runeResult").innerHTML = html;
+};
+
+function drawRune() {
+  const rune = runes[Math.floor(Math.random() * runes.length)];
+
+  const html = `
+    <div class="card">
+      <div style="font-size: 90px; width: 250px; text-align: center;">
+        ${rune.symbol}
+      </div>
+
+      <div class="cardText">
+        <h3>ᚱ 今すべきこと</h3>
+        <h2>${rune.name}</h2>
+        <p><strong>${rune.keyword}</strong></p>
+        <p>${rune.message}</p>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("runeResult").innerHTML = html;
+}
+
 </script>
 </body>
 </html>
