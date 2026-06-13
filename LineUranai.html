@@ -146,26 +146,6 @@ window.drawCard = function () {
 
 };
 
-window.drawRune = function () {
-  const rune = runes[Math.floor(Math.random() * runes.length)];
-
-  const html = `
-    <div class="card">
-      <div style="font-size: 90px; width: 250px; text-align: center;">
-        ${rune.symbol}
-      </div>
-
-      <div class="cardText">
-        <h3>ᚱ 今すべきこと</h3>
-        <h2>${rune.name}</h2>
-        <p><strong>${rune.keyword}</strong></p>
-        <p>${rune.message}</p>
-      </div>
-    </div>
-  `;
-
-  document.getElementById("runeResult").innerHTML = html;
-};
 
 function drawRune() {
   const rune = runes[Math.floor(Math.random() * runes.length)];
