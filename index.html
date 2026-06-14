@@ -11,14 +11,28 @@
       padding: 40px;
       color: #5a3a3a;
     }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 360px;
-      margin: 20px auto;
-      box-shadow: 0 4px 12px #ddd;
-    }
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 720px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px #ddd;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  text-align: left;
+}
+
+
+
+.card img {
+  width: 250px;
+  flex-shrink: 0;
+}
+
     button {
       background: #ffd86b;
       border: none;
@@ -27,42 +41,57 @@
       font-size: 18px;
       cursor: pointer;
     }
+
+.cardText {
+  flex: 1;
+}
+
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣</h1>
+  <h1>🐣ヒヨコタロット🐣</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
 
-  <div class="card">
-<img id="cardImage"
-     width="250"
-     style="display:block;margin:auto;">
-    <h2 id="cardName">まだ引いてないよ</h2>
-    <p id="message">ボタンを押してね🐣</p>
-  </div>
+<div id="result"></div>
 
-  <script type="module">
+<script type="module">
 import { tarotCards } from "./logic/tarot.js";
 
-window.drawCard =  function () {
-  const card = tarotCards[Math.floor(Math.random() * tarotCards.length)];
-  const isReversed = Math.random() < 0.5;
+window.drawCard = function () {
+  const positions = ["① 現状", "② 相手の気持ち", "③ 今後の流れ"];
 
-const img = document.getElementById("cardImage");
-img.src = card.image;
-if (isReversed) {
-  img.style.transform = "rotate(180deg)";
-} else {
-  img.style.transform = "rotate(0deg)";
-}
-document.getElementById("cardName").textContent =
-  `${card.number} ${card.emoji} ${card.name}` +
-  (isReversed ? "（逆位置）" : "（正位置）");
+  const shuffled = [...tarotCards].sort(() => Math.random() - 0.5);
+  const selectedCards = shuffled.slice(0, 3);
 
-  document.getElementById("message").innerHTML =
-    isReversed ? card.reversed : card.upright;
+  let html = "";
+
+  selectedCards.forEach((card, index) => {
+    const isReversed = Math.random() < 0.5;
+    const message = isReversed ? card.reversed : card.upright;
+
+    html += `
+      <div class="card">
+        <img
+          src="${card.image}"
+          width="250"
+          style="transform: rotate(${isReversed ? 180 : 0}deg);"
+        >
+
+        <div class="cardText">
+          <h3>${positions[index]}</h3>
+          <h2>
+            ${card.number} ${card.emoji} ${card.name}
+            ${isReversed ? "（逆位置）" : "（正位置）"}
+          </h2>
+          <p>${message}</p>
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById("result").innerHTML = html;
 };
 </script>
 </body>
