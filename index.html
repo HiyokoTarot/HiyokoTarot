@@ -60,55 +60,29 @@
 import { tarotCards } from "./logic/tarot.js";
 
 window.drawCard = function () {
-const shuffled = [...tarotCards].sort(() => Math.random() - 0.5);
-const card = shuffled[0];
+  const shuffled = [...tarotCards].sort(() => Math.random() - 0.5);
+  const card = shuffled[0];
 
-const isReversed = Math.random() < 0.5;
-const message = isReversed ? card.reversed : card.upright;
+  const isReversed = Math.random() < 0.5;
+  const message = isReversed ? card.reversed : card.upright;
 
-const html = `
-  <div class="card">
-    <img
-      src="${card.image}"
-      width="250"
-      style="transform: rotate(${isReversed ? 180 : 0}deg);"
-    >
+  const html = `
+    <div class="card">
+      <img
+        src="${card.image}"
+        width="250"
+        style="transform: rotate(${isReversed ? 180 : 0}deg);"
+      >
 
-    <div class="cardText">
-      <h2>
-        ${card.number} ${card.emoji} ${card.name}
-        ${isReversed ? "（逆位置）" : "（正位置）"}
-      </h2>
-      <p>${message}</p>
-    </div>
-  </div>
-`;
-
-document.getElementById("result").innerHTML = html;
-
-
-  let html = "";
-
-
-    html += `
-      <div class="card">
-        <img
-          src="${card.image}"
-          width="250"
-          style="transform: rotate(${isReversed ? 180 : 0}deg);"
-        >
-
-        <div class="cardText">
-          <h3>${positions[index]}</h3>
-          <h2>
-            ${card.number} ${card.emoji} ${card.name}
-            ${isReversed ? "（逆位置）" : "（正位置）"}
-          </h2>
-          <p>${message}</p>
-        </div>
+      <div class="cardText">
+        <h2>
+          ${card.number} ${card.emoji} ${card.name}
+          ${isReversed ? "（逆位置）" : "（正位置）"}
+        </h2>
+        <p>${message}</p>
       </div>
-    `;
-  });
+    </div>
+  `;
 
   document.getElementById("result").innerHTML = html;
 };
