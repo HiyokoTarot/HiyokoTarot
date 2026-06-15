@@ -60,16 +60,35 @@
 import { tarotCards } from "./logic/tarot.js";
 
 window.drawCard = function () {
-  const positions = ["① 現状", "② 相手の気持ち", "③ 今後の流れ"];
+const shuffled = [...tarotCards].sort(() => Math.random() - 0.5);
+const card = shuffled[0];
 
-  const shuffled = [...tarotCards].sort(() => Math.random() - 0.5);
-  const selectedCards = shuffled.slice(0, 3);
+const isReversed = Math.random() < 0.5;
+const message = isReversed ? card.reversed : card.upright;
+
+const html = `
+  <div class="card">
+    <img
+      src="${card.image}"
+      width="250"
+      style="transform: rotate(${isReversed ? 180 : 0}deg);"
+    >
+
+    <div class="cardText">
+      <h2>
+        ${card.number} ${card.emoji} ${card.name}
+        ${isReversed ? "（逆位置）" : "（正位置）"}
+      </h2>
+      <p>${message}</p>
+    </div>
+  </div>
+`;
+
+document.getElementById("result").innerHTML = html;
+
 
   let html = "";
 
-  selectedCards.forEach((card, index) => {
-    const isReversed = Math.random() < 0.5;
-    const message = isReversed ? card.reversed : card.upright;
 
     html += `
       <div class="card">
