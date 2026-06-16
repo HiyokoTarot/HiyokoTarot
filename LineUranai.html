@@ -98,7 +98,7 @@
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.20</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.31</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
@@ -175,17 +175,39 @@ function drawRune() {
 };
 
 function drawEki() {
+
+function lineSymbol(n) {
+  if (n === 6 || n === 8) return "-- --";
+  if (n === 7 || n === 9) return "-----";
+}
+
   const eki = drawHexagram();
+
+const honkaText =
+  eki.lines
+    .slice()
+    .reverse()
+    .map(lineSymbol)
+    .join("<br>");
+
+const shikaText =
+  eki.changedHexagram
+    .slice()
+    .reverse()
+    .map(lineSymbol)
+    .join("<br>");
 
   const html = `
     <div class="card">
       <div class="cardText">
         <h3>☯ 易</h3>
-        <p>本卦：${eki.lines.join(", ")}</p>
-        <p>変爻：${eki.changedLines.join("・") || "なし"}</p>
-        <p>之卦：${eki.changedHexagram.join(", ")}</p>
-      </div>
-    </div>
+<p><strong>本卦</strong></p>
+<div>${honkaText}</div>
+
+<p>変爻：${eki.changedLines.join("・") || "なし"}</p>
+
+<p><strong>之卦</strong></p>
+<div>${shikaText}</div>    </div>
   `;
 
   document.getElementById("ekiResult").innerHTML = html;
