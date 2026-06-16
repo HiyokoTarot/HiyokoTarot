@@ -211,13 +211,17 @@ const shikaText =
 
 <h4>本卦：${eki.honka?.name}</h4>
 <p>${eki.honka?.keyword}</p>
+<p>${eki.honka?.message}</p>
 
 <div>${honkaText}</div>
 
+<hr>
 <p>変爻：${eki.changedLines.join("・") || "なし"}</p>
+<hr>
 
 <h4>之卦：${eki.shika?.name}</h4>
 <p>${eki.shika?.keyword}</p>
+<p>${eki.shika?.message}</p>
 
 <div>${shikaText}</div>
 
