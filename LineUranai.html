@@ -206,14 +206,21 @@ const shikaText =
   const html = `
     <div class="card">
       <div class="cardText">
-        <h3>☯ 易</h3>
-<p><strong>本卦</strong></p><p>本卦名：${eki.honka?.name}</p>
+
+<h3>☯ 易</h3>
+
+<h4>本卦：${eki.honka?.name}</h4>
+<p>${eki.honka?.keyword}</p>
+
 <div>${honkaText}</div>
 
 <p>変爻：${eki.changedLines.join("・") || "なし"}</p>
 
-<p><strong>之卦</strong></p><p>之卦名：${eki.shika?.name}</p>
-<div>${shikaText}</div>    </div>
+<h4>之卦：${eki.shika?.name}</h4>
+<p>${eki.shika?.keyword}</p>
+
+<div>${shikaText}</div>
+
   `;
 
   document.getElementById("ekiResult").innerHTML = html;
