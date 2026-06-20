@@ -18,7 +18,7 @@ export const tarotCards = [
 
       { number: 7, name: "戦車", emoji: "🏇", image: "./tarot/07Chariot.png", upright: "前進 行動 勝利 挑戦 突破 意志力 勢い<hr>進むべき道は見えているはず<br>踏み出す勇気が未来を切り開くよ", reversed: "暴走 迷子 空回り 強引<hr>アクセル踏みすぎ エンジンふかしちゃうよ<br>深呼吸して 冷静に運転してみよう" },
 
-      { number: 8, name: "力", emoji: "🦁", image: "./tarot/08Strength.png", upright: "忍耐 自制心 内なる強さ 勇気<hr>焦って進める必要はないよ<br>きみは芯の通った強さを持っているから", reversed: "自信喪失 卑下 過小評価 弱気 不安 焦り<hr>そんなに自分を過小評価しないで<br>きみの中には強さが秘められているよ" },
+      { number: 8, name: "力", emoji: "🦁", image: "./tarot/08Strength.png", upright: "忍耐 自制心 内なる強さ 勇気<hr>そんなに不安になる必要はないよ<br>きみは芯の通った強さを持っているから", reversed: "自信喪失 卑下 過小評価 弱気 不安 焦り<hr>そんなに自分を過小評価しないで<br>きみの中には強さが秘められているよ" },
 
       { number: 9, name: "隠者", emoji: "🕯", image: "./tarot/09Hermit.png", upright: "探求 内省 熟考 静寂 真理<hr>本当の答えは自分の中にある<br>ひとり時間を大切にしてみて", reversed: "ひとりよがり 引きこもり<hr>一人で決めない方がいいよ<br>外に出ると見える景色も変わるはず" },
 
@@ -32,7 +32,7 @@ export const tarotCards = [
 
       { number: 14, name: "節制", emoji: "💧", image: "./tarot/14Temperance.png", upright: "バランス 調和 中庸 協調 順応<hr>上手に混ぜ合わせたね<br>このバランスを保とう", reversed: "アンバランス 不調和 極端 やりすぎ 偏り すれ違い<hr>バランスが崩れちゃったみたい<br>上手に混ぜ合わせる方法を探して" },
 
-      { number: 15, name: "悪魔", emoji: "😈", image: "./tarot/15Devil.png", upright: "惰性 依存 執着 束縛 誘惑<hr>やめたいのにやめられないんだね<br>でもその鎖はどこにもつながってないんだよ", reversed: "断ち切る 解放 自立 気づき<hr>鎖がつながっていないことに気付いたんだね<br>鍵を外して好きな所へ行っておいで" },
+      { number: 15, name: "悪魔", emoji: "😈", image: "./tarot/15Devil.png", upright: "惰性 依存 執着 欲望 情熱 束縛 誘惑<hr>やめたいのにやめられないんだね<br>でもその鎖はどこにもつながってないんだよ", reversed: "断ち切る 解放 自立 気づき<hr>鎖がつながっていないことに気付いたんだね<br>鍵を外して好きな所へ行っておいで" },
 
       { number: 16, name: "塔", emoji: "🗼", image: "./tarot/16Tower.png", upright: "崩壊 変革 衝撃 リセット<hr>無理がたたったのかも？<br>次はもっと基礎を固めて、きみは強くなれるよ", reversed: "先送り 現実逃避 見て見ぬふり 変化への抵抗<hr>本当は気が付いているね<br>壊れる前に基礎を叩き直して" },
 
