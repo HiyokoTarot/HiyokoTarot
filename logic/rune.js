@@ -1,153 +1,155 @@
 export  const runes = [
-      {
+      { number: 1,
         symbol: "ᚠ",
-        name: "フェフ / Fehu",
-        keyword: "豊かさ・成果・所有・財産・家畜・蜂蜜・経験・知識",
+        name: "フェフ / Fehu", image: "./rune/01Fehu.png",
+        keyword: "🍯 豊かさ・成果・所有・財産・家畜・蜂蜜・経験・知識",
         message: "もう十分たくさん持っているよ<br>今ある豊かさにも目を向けてみて、その宝物、気付いてないの？"
       },
-      {
+      { number: 2,
         symbol: "ᚢ",
-        name: "ウルズ / Uruz",
-        keyword: "生命力・本能・行動力・前進・勇気・突破",
-        message: "内側から湧いてくる力を信じて<br>案ずるより産むがやすし、きみならできる！"
+        name: "ウルズ / Uruz", image: "./rune/02Uruz.png",
+
+        keyword: "🐂 生命力・本能・行動力・前進・勇気・突破",
+        message: "内側から湧いてくる本能を信じて<br>案ずるより産むがやすし、きみならできる！"
       },
-      {
+      { number: 3,
         symbol: "ᚦ",
-        name: "スリサズ / Thurisaz",
-        keyword: "試練・痛み・成長・覚悟・境界・防御",
+        name: "スリサズ / Thurisaz", image: "./rune/03Thurisaz.png",
+
+        keyword: "🌵 試練・痛み・成長・覚悟・境界・防御",
         message: "本当に進むんだね。試練を受け入れる覚悟ができているなら、きみの未来は開かれる"
       },
-      {
+      { number: 4,
         symbol: "ᚨ",
-        name: "アンスズ / Ansuz",
-        keyword: "気づき・メッセージ・知恵・神託・真実",
+        name: "アンスズ / Ansuz", image: "./rune/04Ansuz.png",
+        keyword: "🪽 気づき・メッセージ・知恵・神託・真実",
         message: "耳を澄まして、空を見上げてごらん。風に乗って、きみに必要な答えはもう届いているよ"
       },
-      {
+      { number: 5,
         symbol: "ᚱ",
-        name: "ライドゥ / Raido",
-        keyword: "正しい道程・前進・導き・変化",
+        name: "ライドゥ / Raido", image: "./rune/05Raido.png",
+        keyword: "🎒 正しい道程・前進・導き・変化",
         message: "進むべき道が見えているよね。ゴールは見えないかもしれないけど、大丈夫、その一歩がきみを導いてくれる。"
       },
-      {
+      { number: 6,
         symbol: "ᚲ",
-        name: "ケナズ / Kenaz",
-        keyword: "灯火・知恵・才能・発見・ひらめき・創造・暗闇を照らす光",
+        name: "ケナズ / Kenaz", image: "./rune/06Kenaz.png",
+        keyword: "🕯 灯火・知恵・才能・発見・ひらめき・創造・暗闇を照らす光",
         message: "見えなかったものが見えてきたとき、進むべき一歩も自然と明らかになるよ。<br>ずっと探していた答えは、すぐ近くにあったのかもしれないね"
       },
-      {
+      { number: 7,
         symbol: "ᚷ",
-        name: "ゲーボ / Gebo",
-        keyword: "交換・贈り物・授受・バランス・パートナーシップ・ご縁・交換",
+        name: "ゲーボ / Gebo", image: "./rune/07Gebo.png",
+        keyword: "🎁 交換・贈り物・授受・バランス・パートナーシップ・ご縁・交換",
         message: "与えることも、受け取ることも、どちらも大切な贈り物。<br>誰かとの繋がりが、思いがけない幸運を運んできてくれるかも？"
       },
-      {
+      { number: 8,
         symbol: "ᚹ",
-        name: "ウンジョー / Wunjo",
-        keyword: "喜び・満足",
-        message: "幸せはきみのそばにあるよ。遠くにあるんじゃなくて、すぐ近くにある喜びに気が付いて。"
+        name: "ウンジョー / Wunjo", image: "./rune/08Wunjo.png",
+        keyword: "☺️ 喜び・満足",
+        message: "幸せはきみのそばにあるよ。遠くじゃなくて、すぐ近くにある喜びに気が付いて。"
       },
-      {
+      { number: 9,
         symbol: "ᚺ",
-        name: "ハガラズ / Hagalaz",
-        keyword: "変化・嵐・浄化",
-        message: "予定外のことが起きても、それは古い流れを洗い流すきっかけかもしれません。今日は無理に抗わず、安全第一で。"
+        name: "⚡ ハガラズ / Hagalaz", image: "./rune/09Hagalaz.png",
+        keyword: "災害・嵐・予想外・変化・浄化・リセット・再出発",
+        message: "予定外の事件が起きてショックを受けたかもしれないね。けれども、古いものが流れた後には、きっと新しい流れがやってくるよ"
       },
-      {
+      { number: 10,
         symbol: "ᚾ",
-        name: "ナウシズ / Nauthiz",
-        keyword: "忍耐・必要・制限",
-        message: "今すぐ思い通りにならなくても大丈夫。足りないものを責めるより、本当に必要なものを見極める時です。"
+        name: "ナウシズ / Nauthiz", image: "./rune/10Nauthiz.png",
+        keyword: "🌰 工夫・必要・不足・制限・忍耐・サバイバル",
+        message: "足りないからこそ工夫が必要。知恵を絞ればきっと乗り越えられる。ここまで来たらやるしかないよね"
       },
-      {
+      { number: 11,
         symbol: "ᛁ",
-        name: "イサ / Isa",
-        keyword: "停止・静寂・保留",
-        message: "今日は動かない勇気が味方になります。結論を急がず、心と状況が溶けるまで待ってみて。"
+        name: "イサ / Isa", image: "./rune/11Isa.png",
+        keyword: "❄ 停止・凍結・待機・冷静",
+        message: "今は待つとき。静かな時間が、次の一歩を教えてくれるよ"
       },
-      {
+      { number: 12,
         symbol: "ᛃ",
-        name: "イェラ / Jera",
-        keyword: "実り・収穫・成果・時間・季節・積み重ね",
+        name: "イェラ / Jera", image: "./rune/12Jera.png",
+        keyword: "🍎 実り・収穫・成果・時間・季節・積み重ね",
         message: "今まで時間をかけたことが実り始めたみたい。収穫の時期はすぐそこまで来ているよ"
       },
-      {
+      { number: 13,
         symbol: "ᛇ",
-        name: "エイワズ / Eihwaz",
-        keyword: "再生・守り・粘り強さ",
-        message: "一度立ち止まることで、むしろ強くなれる日。しぶとさと柔らかさ、どちらもあなたの力です。"
+        name: "エイワズ / Eihwaz", image: "./rune/13Eihwaz.png",
+        keyword: "🌳 信念・守護・バランス・境目・世界樹・循環",
+        message: "マンガでは「数年後」の一言で飛ばされてしまう、その毎日をぼくたちは生きている<br>目立たない日々の積み重ねを支えるものがきみの信念だよ"
       },
-      {
+      { number: 14,
         symbol: "ᛈ",
-        name: "ペルトロ / Perthro",
-        keyword: "予感・気配・秘密・未知・運命・神秘",
+        name: "ペルトロ / Perthro", image: "./rune/14Perthro.png",
+        keyword: "🐚 予感・気配・秘密・未知・運命・神秘",
         message: "まだ答えは見えないみたい。でも、もうすぐ何かが見つかりそうな気配。その予感を大事にして。"
       },
-      {
+      { number: 15,
         symbol: "ᛉ",
-        name: "アルジズ / Algiz",
-        keyword: "守護・直感・安全",
-        message: "今日は直感がよく働きそう。違和感は無視しないで。あなたを守るための小さなサインかもしれません。"
+        name: "アルギズ / Algiz", image: "./rune/15Algiz.png",
+        keyword: " 🦌 守護・保護・警戒・安全・仲間・高次の導き",
+        message: "きみの中に生まれた違和感を信じて<br>その慎重さがきみを守ってくれる"
       },
-      {
+      { number: 16,
         symbol: "ᛋ",
-        name: "ソウェイル / Sowilo",
-        keyword: "太陽・成功・活力",
-        message: "明るい方向へ進む力があります。隠れずに、自分の良さを少し表に出してみて。"
+        name: "ソウィロ / Sowilo", image: "./rune/16Sowilo.png",
+        keyword: "🌞 朝・活力・自信・本来の自分",
+        message: "そろそろ自分の中の光を信じて<br>きみは前に進む力を持っている"
       },
-      {
+      { number: 17,
         symbol: "ᛏ",
-        name: "ティワズ / Tiwaz",
-        keyword: "正義・勝利・決断",
-        message: "筋を通すことが力になる日。迷った時は、短期の得よりも自分が誇れる選択を。"
+        name: "ティワズ / Tiwaz", image: "./rune/17Tiwaz.png",
+        keyword: "⚔ 覚悟・正義・献身・決意・勇気",
+        message: "怖くても大丈夫。正しいと思う道を信じて。<br>勇気とは恐れないことではなく、一歩踏み出すこと"
       },
-      {
+      { number: 18,
         symbol: "ᛒ",
-        name: "ベルカナ / Berkano",
-        keyword: "育成・誕生・やさしさ・母性",
+        name: "ベルカナ / Berkano", image: "./rune/18Berkana.png",
+        keyword: "🌱 育成・誕生・やさしさ・母性",
         message: "何かが静かに育っているよ。急かさず、守りながら育てることで、やがて形になっていくよ。"
       },
-      {
+      { number: 19,
         symbol: "ᛖ",
-        name: "エワズ / Ehwaz",
-        keyword: "信頼・協力・前進",
-        message: "ひとりで抱え込まなくて大丈夫。信頼できる人や流れに乗ることで、進みやすくなります。"
+        name: "エワズ / Ehwaz", image: "./rune/19Ehwaz.png",
+        keyword: "🐎 信頼・相棒・前進",
+        message: "信頼できる相棒と一緒に進もう<br>ひとりよりもずっと遠くまで行けるよ"
       },
-      {
+      { number: 20,
         symbol: "ᛗ",
-        name: "マンナズ / Mannaz",
-        keyword: "人間関係・自己理解・共同体",
-        message: "自分を知ることが、人との関係を整える鍵になります。今日は“私は本当はどうしたい？”と聞いてみて。"
+        name: "マンナズ / Mannaz", image: "./rune/20Mannaz.png",
+        keyword: "🤝 人間・協力・仲間・学び・社会",
+        message: "きみはひとりじゃない。<br>人とのかかわりや学びが、きみを成長させてくれるよ"
       },
-      {
+      { number: 21,
         symbol: "ᛚ",
-        name: "ラグズ / Laguz",
-        keyword: "水・感情・流れ",
+        name: "ラグズ / Laguz", image: "./rune/21Laguz.png",
+        keyword: "💧 水・感情・流れ",
         message: "頭で考えないで、気になる方を直感で選んでみて。<br>流れに乗るのも大事だよ"
       },
-      {
+      { number: 22,
         symbol: "ᛜ",
-        name: "イングワズ / Ingwaz",
-        keyword: "内なる力・準備・完成前夜",
-        message: "表にはまだ見えなくても、内側では準備が進んでいます。今日は焦らず、力を蓄える時間に。"
+        name: "イングズ / Inguz", image: "./rune/22Inguz.png",
+        keyword: "🥚 可能性・期待・準備・未来",
+        message: "もうすぐ何かが生まれるかも？可能性が静かに育っているよ。どんな未来が待っているのかな？"
       },
-      {
+      { number: 23,
         symbol: "ᛞ",
-        name: "ダガズ / Dagaz",
-        keyword: "夜明け・転換・希望",
-        message: "流れが切り替わる兆し。小さな気づきが、これからの景色を大きく変えてくれそうです。"
+        name: "ダガズ / Dagaz", image: "./rune/23Dagaz.png",
+        keyword: "🌅 夜明け・転換・変容・希望・覚醒・新しい段階",
+        message: "ずっと続いていた夜も、そろそろ開けるみたい。気づいたら世界が変わっているかも。新しい朝はすぐそこだよ。"
       },
-      {
+      { number: 24,
         symbol: "ᛟ",
-        name: "オシラ / Othala",
-        keyword: "家族・継承・居場所",
-        message: "あなたの根っこにあるものが力になります。家、家族、受け継いできたものを見直すと安心が戻りそう。"
+        name: "オシラ / Othila", image: "./rune/24Othila.png",
+        keyword: "🏡 故郷・家族・継承・ルーツ・帰る場所",
+        message: "きみはたくさんのものを受け継いでいるよ<br>忘れないで、きみには帰る場所がある"
       },
 
-      {
+      { number: 0,
         symbol: " ",
-        name: "ブランク / Blank",
-        keyword: "可能性・無限・未知",
+        name: "ブランク / Blank", image: "./rune/00Blank.png",
+        keyword: "🌌 可能性・無限・未知",
         message: "たくさんの可能性が広がっているよ。まだ何も決まっていないからこそ、どんな未来も選べるね"
       }
 
