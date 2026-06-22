@@ -98,7 +98,7 @@
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.4</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.41</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
@@ -164,7 +164,7 @@ function drawRune() {
 >
       <div class="cardText">
         <h3>ᚱ 今すべきこと</h3>
-        <h2>${rune.name}</h2>
+        <h2>${rune.number} ${rune.name}</h2>
         <p><strong>${rune.keyword}</strong></p>
         <p>${rune.message}</p>
       </div>
@@ -209,7 +209,7 @@ const shikaText =
 
 <h3>☯ 易</h3>
 
-<h4>本卦：${eki.honka?.name}</h4>
+<h4>本卦：${eki.no} ${eki.honka?.name}</h4>
 <p>${eki.honka?.keyword}</p>
 <p>${eki.honka?.message}</p>
 
