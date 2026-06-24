@@ -44,7 +44,7 @@ export const tarotCards = [
 
       { number: 20, name: "審判", emoji: "📯", image: "./tarot/20Judgement.png", upright: "目覚め 復活 再起 再挑戦 許し<hr>そろそろ顔を上げてみない？<br>次の挑戦がきみを待っているよ", reversed: "後悔 自己否定 執着<hr>ずっと後悔しているんだね<br>そろそろ顔を上げてもいいころだよ" },
 
-      { number: 21, name: "世界", emoji: "🌎", image: "./tarot/21World.png", upright: "完成 ゴール 成就 満足 統合<hr>ゴールおめでとう！<br>長い旅はこの時のためだったんだね", reversed: "未完成 中途半端 詰めが甘い<hr>長旅お疲れ様！<br>ゴールまであと一息、乾燥目指して行っておいで" }
+      { number: 21, name: "世界", emoji: "🌎", image: "./tarot/21World.png", upright: "完成 ゴール 成就 満足 統合<hr>ゴールおめでとう！<br>長い旅はこの時のためだったんだね", reversed: "未完成 中途半端 詰めが甘い<hr>長旅お疲れ様！<br>ゴールまであと一息、完走目指して行っておいで" }
 
 
 
