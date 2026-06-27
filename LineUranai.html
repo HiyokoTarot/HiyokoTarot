@@ -98,7 +98,7 @@
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.42</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.5</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
@@ -106,11 +106,13 @@
 <div id="result"></div>
 <div id="runeResult"></div>
 <div id="ekiResult"></div>
+<div id="kamigamiResult"></div>
 
 <script type="module">
 import { tarotCards } from "./logic/tarot.js";
 import { runes } from "./logic/rune.js";
 import { drawHexagram } from "./logic/eki.js";
+import { kamigamis } from "./logic/kamigami.js";
 
 window.drawCard = function () {
   const positions = ["① 現状", "② 相手の気持ち", "③ 今後の流れ"];
@@ -149,6 +151,8 @@ window.drawCard = function () {
 drawRune();
 
 drawEki();
+
+drawKamigami();
 
 };
 
@@ -231,6 +235,24 @@ const shikaText =
   `;
 
   document.getElementById("ekiResult").innerHTML = html;
+}
+
+function drawKamigami() {
+  const kamigami = kamigamis[Math.floor(Math.random() * kamigamis.length)];
+
+  const html = `
+    <div class="card">
+
+      <div class="cardText">
+        <h3>今日の神々</h3>
+        <h2>${kamigami.number} ${kamigami.emoji} ${kamigami.name}</h2>
+        <p><strong>${kamigami.keyword}</strong></p>
+        <p>${kamigami.message}</p>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("kamigamiResult").innerHTML = html;
 }
 
 
