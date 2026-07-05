@@ -99,7 +99,7 @@
   </style>
 </head>
 <body>
-  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.6</h1>
+  <h1>🐣さやこちょっぱや占いぷろぐらむ🐣ver1.7</h1>
   <p>今日の一枚を引いてみてね</p>
 
   <button onclick="drawCard()">カードを引く</button>
@@ -116,7 +116,7 @@ import { drawHexagram } from "./logic/eki.js";
 import { kamigamis } from "./logic/kamigami.js";
 
 window.drawCard = function () {
-  const positions = ["🃏 相手のお持ち"];
+  const positions = ["🃏 今どうなってるの？"];
 
 const shuffled = [...tarotCards].sort(() => Math.random() - 0.5);
 const card = shuffled[0];
@@ -168,7 +168,7 @@ function drawRune() {
   width="250"
 >
       <div class="cardText">
-        <h3>💎 今起こってること</h3>
+        <h3>💎 どうしてそうなってるの？</h3>
         <h2>${rune.number} ${rune.emoji} ${rune.name}</h2>
         <p><strong>${rune.keyword}</strong></p>
         <p>${rune.message}</p>
@@ -214,7 +214,7 @@ const shikaText =
     <div class="card">
       <div class="cardText">
 
-<h3>☯ この先の流れ</h3>
+<h3>☯ これからどうなるの？</h3>
 
 <h4>本卦：${eki.honka.no} ${eki.honka.emoji} ${eki.honka?.name}</h4>
 <p>${eki.honka?.keyword}</p>
@@ -245,7 +245,7 @@ function drawKamigami() {
     <div class="card">
 
       <div class="cardText">
-        <h3>⛩ 今日の神々</h3>
+        <h3>⛩ はげまして！</h3>
         <h2>${kamigami.number} ${kamigami.emoji} ${kamigami.name}</h2>
         <p><strong>${kamigami.keyword}</strong></p>
         <p>${kamigami.message}</p>
