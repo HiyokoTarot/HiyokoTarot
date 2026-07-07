@@ -3,80 +3,81 @@ export  const kamigamis = [
       { number: 1,
         emoji: "🌞",
         name: "天照大神 あまてらすおおみかみ", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        keyword: "光 希望 夜明け 好奇心 心を開く 真実",
+        message: "あなたの中の正しい光が世界を照らしています<br>好奇心がおもむく方へ、心を開こう"
       },
       { number: 2,
-        emoji: "🌪️",
-        name: "須佐之男命 すさのお", image: "./kamigami/02.png",
-        keyword: "",
-        message: ""
+        emoji: "🌕",
+        name: "月読命 つくよみのみこと", image: "./kamigami/01.png",
+        keyword: "物思い 自分と向き合う 恋心 さびしさ 本音",
+        message: "月夜は自分の本当の気持ちが見えてくるよね<br>朝が来たら思い出して、その気持ちにしたがって行動してみて"
       },
       { number: 3,
-        emoji: "🌕",
-        name: "月読命 つくよみ", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        emoji: "🌪️",
+        name: "須佐之男命 すさのおのみこと", image: "./kamigami/02.png",
+        keyword: "素直 童心 純粋 本音 無邪気 自由",
+        message: "きみの荒ぶる力は、愛するものを守るためだったんだ<br>力の使い方が分かった時、きみは誰よりも強くなれるよ"
       },
+
       { number: 4,
-        emoji: "📖",
-        name: "思金神 おもいかね", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        emoji: "🧠",
+        name: "思金神 おもいかねのかみ", image: "./kamigami/01.png",
+        keyword: "知恵 まとめる 思慮 相談 作戦 次の一歩",
+        message: "よい作戦は世界に光をもたらしてくれる<br>みんなが幸せになる次の一歩を導き出せるよ"
       },
       { number: 5,
         emoji: "💃",
-        name: "天宇受売命 あめのうずめ", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "天宇受売命 あめのうずめのみこと", image: "./kamigami/01.png",
+        keyword: "芸 表現 笑い きっかけ 流れを変える",
+        message: "きみにできることを思い切りすればいい<br>きみの一歩がみんなを動かすよ"
       },
       { number: 6,
         emoji: "🐇",
-        name: "大国主命 おおくにぬし", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "大国主命 おおくにぬしのみこと", image: "./kamigami/01.png",
+        keyword: "縁結び 国造り 育てる 何度でも立ち上がる 援助を受ける 見守る",
+        message: "困ったときはきっと助けてくれる人が現れるよ<br>何度でも立ち上がって、素晴らしい未来を築いて行ける"
       },
       { number: 7,
         emoji: "💊",
-        name: "少彦名命 すくなびこな", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "少彦名命 すくなびこなのみこと", image: "./kamigami/01.png",
+        keyword: "医療 酒 温泉 知恵 小さな一歩 相棒 助け合い 信頼 遠距離",
+        message: "離れていても、心はひとつ！<br>大切な人の想いや記憶、そして絆は、きみの中でたしかに息づいてる"
       },
       { number: 8,
         emoji: "👑",
-        name: "瓊瓊杵尊 ににぎ", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "瓊瓊杵尊 ににぎのみこと", image: "./kamigami/01.png",
+        keyword: "託される 使命 責任 始まり 新天地 仲間",
+        message: "新たな舞台が幕を開けるよ<br>責任は大きいけれど、きみにはたくさんの仲間がいる"
       },
       { number: 9,
         emoji: "👺",
-        name: "猿田彦大神 さるたひこ", image: "./kamigami/01.png",
-        keyword: "",
+        name: "猿田彦神 さるたひこのかみ", image: "./kamigami/01.png",
+        keyword: "道開き 導き 旅立ち 出発 方向性 挑戦",
         message: ""
       },
       { number: 10,
         emoji: "🌸",
-        name: "木花咲耶姫命 このはなさくやひめ", image: "./kamigami/01.png",
-        keyword: "",
+        name: "木花咲耶姫命 このはなさくやひめのみこと", image: "./kamigami/01.png",
+        keyword: "美 命 花 信じる",
         message: ""
       },
       { number: 11,
         emoji: "🐉",
         name: "龍神 りゅうじん", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        keyword: "流れ 探求 アイテム 出会い 技術 文化交流 新しい発見 革新",
+        message: "もっと知りたいと思ったら、流れに逆らわないで<br>その探求心が、きみに新しい出会いをもたらすよ"
       },
       { number: 12,
         emoji: "⚔",
-        name: "日本武尊 やまとたける", image: "./kamigami/01.png",
+        name: "日本武尊 やまとたけるのみこと", image: "./kamigami/01.png",
         keyword: "",
         message: ""
       },
       { number: 13,
         emoji: "💰",
         name: "七福神 しちふくじん", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        keyword: "団結 豊作 大漁 繁盛 富 健康 長寿",
+        message: "力を合せるほど、福は大きくなる！<br>たくさんの福がきみの元へ集まって来るよ"
       },
       { number: 14,
         emoji: "👁",
@@ -111,8 +112,8 @@ export  const kamigamis = [
       { number: 19,
         emoji: "✋",
         name: "観音菩薩 かんのんぼさつ", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        keyword: "慈悲 救い 微笑み 向き合う",
+        message: "きみを助けるたくさんの手があるよ<br>心配しないでその手を握ってごらん"
       },
       { number: 20,
         emoji: "🖌",
@@ -123,8 +124,8 @@ export  const kamigamis = [
       { number: 21,
         emoji: "🗿",
         name: "大仏様 だいぶつさま", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        keyword: "夢 安心 願い 時を超える 力を合せる",
+        message: "たくさんの人が力を合せた願いは今<br>時を超えてみんなの夢を見守り続けている"
       },
       { number: 22,
         emoji: "🗾",
@@ -135,54 +136,54 @@ export  const kamigamis = [
       { number: 23,
         emoji: "🚥",
         name: "住吉大神 すみよしたいじん", image: "./kamigami/01.png",
-        keyword: "",
+        keyword: "安全 守護 旅 航海 前進",
         message: ""
       },
       { number: 24,
-        emoji: "🛥",
+        emoji: "🚢",
         name: "宗像三女神 むなかたさんじょしん", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        keyword: "交通安全 ご縁 国際交流 人生 美",
+        message: "きみの行く先には、すてきなご縁が待っているよ<br>きっときみを成長させてくれるから、安心してそのまま進もう"
       },
       { number: 25,
         emoji: "🌾",
-        name: "宇迦之御魂命 うかのみたま", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "宇迦之御魂命 うかのみたまのみこと", image: "./kamigami/01.png",
+        keyword: "家族 団らん 分かち合う 感謝 豊穣 繁盛",
+        message: "ちゃんとご飯食べてる？<br>みんなでご飯を食べられる幸せに感謝して、いただきます！"
       },
       { number: 26,
         emoji: "🏔",
-        name: "大山咋神 おおやまくい", image: "./kamigami/01.png",
-        keyword: "",
+        name: "大山咋神 おおやまくいのかみ", image: "./kamigami/01.png",
+        keyword: "土台 守る 山 実力者 水源 森林 学び",
         message: ""
       },
       { number: 27,
         emoji: "🎀",
-        name: "菊理媛神 くくりひめ", image: "./kamigami/01.png",
+        name: "菊理媛神 くくりひめのかみ", image: "./kamigami/01.png",
         keyword: "",
         message: ""
       },
       { number: 28,
         emoji: "⚡",
-        name: "建御雷神 たけみかづち", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "建御雷神 たけみかづちのかみ", image: "./kamigami/01.png",
+        keyword: "秩序 落ち着き 交渉 変幻自在 転機 受け継ぐ 橋渡し つなぐ",
+        message: "きみには変幻自在の力がある<br>混乱を静めて橋を架ける力なんだよ"
       },
       { number: 29,
         emoji: "🤼",
-        name: "建御名方神 たけみなかた", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "建御名方神 たけみなかたのかみ", image: "./kamigami/01.png",
+        keyword: "使命 挑む 守る 正義感 信念 約束 故郷",
+        message: "今、きみだからこそ果たせる使命は何？<br>信じる道を歩み続けた先に、きみだけの居場所が待っているよ"
       },
       { number: 30,
         emoji: "🕊",
-        name: "八幡様 はちまん", image: "./kamigami/01.png",
-        keyword: "",
-        message: ""
+        name: "八幡様 はちまんさま", image: "./kamigami/01.png",
+        keyword: "息づく 守る 挑戦する ぶつかる 行動する",
+        message: "いつの間にかぼくたちの暮らしに息づいて、今もそばに寄り添っている<br>自然に溶け込んだ守り神がついているよ"
       },
       { number: 31,
         emoji: "👓",
-        name: "天神様 てんじん", image: "./kamigami/01.png",
+        name: "天神様 てんじんさま", image: "./kamigami/01.png",
         keyword: "",
         message: "逆境は乗り越えるためにある！大いに返り咲くよ"
       },
