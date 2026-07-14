@@ -52,14 +52,14 @@ export  const kamigamis = [
       { number: 9,
         emoji: "👺",
         name: "猿田彦神 さるたひこのかみ", image: "./kamigami/09Sarutahiko.png",
-        keyword: "道開き 導き 旅立ち 出発 方向性 挑戦",
-        message: ""
+        keyword: "道開き 導き 旅立ち 出発 方向性 見送る",
+        message: "きみの旅立ちを見送るよ<br>安心して、いってらっしゃい！"
       },
       { number: 10,
         emoji: "🌸",
         name: "木花咲耶姫命 このはなさくやひめのみこと", image: "./kamigami/10Sakuya.png",
-        keyword: "美 命 花 信じる",
-        message: ""
+        keyword: "美 命 花 信じる  潔白 覚悟 生命力 誇り",
+        message: "きみの覚悟を信じているんだね<br>どんな試練の中でも、美しい花を咲かせるよ"
       },
       { number: 11,
         emoji: "🐉",
@@ -93,15 +93,15 @@ export  const kamigamis = [
       },
       { number: 16,
         emoji: "🐈",
-        name: "招き猫 まねきねこ", image: "./kamigami/16.Manekinekopng",
+        name: "招き猫 まねきねこ", image: "./kamigami/16.Manekineko.png",
         keyword: "招く 縁 福 金運 豊かさ チャンス 賑やか 魅力 かわいい",
         message: "愛されるのは理由がある❤<br>かわいいだけじゃない、きみの実力を見せてやろう"
       },
       { number: 17,
         emoji: "👶",
         name: "お地蔵様 おじぞうさま", image: "./kamigami/17Zizo.png",
-        keyword: "",
-        message: ""
+        keyword: "寄り添う 身近 そばで見守る 安心 優しい 子ども 癒し",
+        message: "子どものころから、ずっとそばで見守っているよ<br>あのころのきみは、今もきみの中にいるよ"
       },
       { number: 18,
         emoji: "🔥",
@@ -130,14 +130,14 @@ export  const kamigamis = [
       { number: 22,
         emoji: "🗾",
         name: "伊邪那岐命・伊邪那美命 いざなぎ・いざなみ", image: "./kamigami/22Izana.png",
-        keyword: "始まり 協力 離別",
-        message: ""
+        keyword: "始まり 創造 協力 離別 循環",
+        message: "終わりは、新しい始まりにつながっているよ。<br>力を合わせれば、その未来はもっと大きく育つ。"
       },
       { number: 23,
         emoji: "🚥",
         name: "住吉大神 すみよしたいじん", image: "./kamigami/23Sumiyoshi.png",
-        keyword: "安全 守護 旅 航海 前進",
-        message: ""
+        keyword: "帰途 家路 居場所 安全 守護 旅 無事",
+        message: "おかえり、って、きみを待っている人がいるよ<br>"
       },
       { number: 24,
         emoji: "🚢",
@@ -185,6 +185,6 @@ export  const kamigamis = [
         emoji: "👓",
         name: "天神様 てんじんさま", image: "./kamigami/31Tenzin.png",
         keyword: "逆境 返り咲く 学問",
-        message: "逆境は乗り越えるためにある！大いに返り咲くよ"
+        message: "逆境は乗り越えるためにある！大いに返り咲くよ<br>この時を何千年も待ってた 1日くらい待たせておけ！"
       },
     ];
