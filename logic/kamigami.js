@@ -106,8 +106,8 @@ export  const kamigamis = [
       { number: 18,
         emoji: "🔥",
         name: "不動明王 ふどうみょうおう", image: "./kamigami/18Hudo.png",
-        keyword: "",
-        message: ""
+        keyword: "叱る 信念 厳しさ 断ち切る 見捨てない 揺るがない",
+        message: "本当に大切なことなら、嫌われたって揺るがない<br>どんな手を使ってもきみを守る！"
       },
       { number: 19,
         emoji: "✋",
@@ -118,8 +118,8 @@ export  const kamigamis = [
       { number: 20,
         emoji: "🖌",
         name: "厄除け大師 やくよけだいし", image: "./kamigami/20Daishi.png",
-        keyword: "",
-        message: ""
+        keyword: "厄除け 祈り 困難を超える 同行",
+        message: "困った時にはきっと助けに行くからね<br>厄が福になるまで、一緒に歩くよ"
       },
       { number: 21,
         emoji: "🗿",
@@ -135,7 +135,7 @@ export  const kamigamis = [
       },
       { number: 23,
         emoji: "🚥",
-        name: "住吉大神 すみよしたいじん", image: "./kamigami/23Sumiyoshi.png",
+        name: "住吉大神 すみよしおおかみ", image: "./kamigami/23Sumiyoshi.png",
         keyword: "帰途 家路 居場所 安全 守護 旅 無事",
         message: "おかえり、って、きみを待っている人がいるよ<br>"
       },
