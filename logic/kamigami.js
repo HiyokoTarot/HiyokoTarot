@@ -93,7 +93,7 @@ export  const kamigamis = [
       },
       { number: 16,
         emoji: "🐈",
-        name: "招き猫 まねきねこ", image: "./kamigami/16.Manekineko.png",
+        name: "招き猫 まねきねこ", image: "./kamigami/16Manekineko.png",
         keyword: "招く 縁 福 金運 豊かさ チャンス 賑やか 魅力 かわいい",
         message: "愛されるのは理由がある❤<br>かわいいだけじゃない、きみの実力を見せてやろう"
       },
