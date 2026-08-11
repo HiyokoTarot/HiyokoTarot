@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>開運ヒヨコ占い 縦カレンダー</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .controls {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .calendar-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .day-card {
+      background: white;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .date {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .summary {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    .empty {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .google-calendar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 30px;
+}
+
+.google-calendar iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 600px;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <h1>🐣 開運ヒヨコ占い<br>8月カレンダー 🐣</h1>
+
+  <div class="google-calendar">
+<iframe src="https://calendar.google.com/calendar/embed?src=sayakohiyokouranai%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+  <div class="controls">
+  </div>
+
+  <div id="calendarList" class="calendar-list"></div>
+
+  <script>
+    const year = 2026;
+    const month = 8;
+
+    const calendarList = document.getElementById("calendarList");
+
+    function createDayCards() {
+      const lastDate = new Date(year, month, 0).getDate();
+
+      for (let day = 1; day <= lastDate; day++) {
+
+        const dateObj = new Date(year, month - 1, day);
+
+        const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
+        const weekday = weekdays[dateObj.getDay()];
+
+        const dateKey =
+          `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
+        const card = document.createElement("div");
+        card.className = "day-card";
+        card.dataset.date = dateKey;
+
+        const dateDiv = document.createElement("div");
+        dateDiv.className = "date";
+        dateDiv.textContent = `${month}月${day}日（${weekday}）`;
+
+        const contentDiv = document.createElement("div");
+        contentDiv.className = "content";
+
+        const emptyDiv = document.createElement("div");
+        emptyDiv.className = "empty";
+        emptyDiv.textContent = "—";
+
+        contentDiv.appendChild(emptyDiv);
+
+        card.appendChild(dateDiv);
+        card.appendChild(contentDiv);
+
+        calendarList.appendChild(card);
+      }
+    }
+
+    createDayCards();
+
+async function loadCalendar() {
+  const response = await fetch("calendar.ics");
+  let text = await response.text();
+
+      // ICSの折り返しを解除
+      text = text.replace(/\r?\n[ \t]/g, "");
+
+      const events = text.split("BEGIN:VEVENT").slice(1);
+
+      events.forEach(block => {
+
+        const dtstartMatch =
+          block.match(/DTSTART(?:;[^:]*)?:(\d{8})/);
+
+        const summaryMatch =
+          block.match(/SUMMARY:(.*)/);
+
+        const descriptionMatch =
+          block.match(/DESCRIPTION:(.*)/);
+
+        if (!dtstartMatch || !summaryMatch) return;
+
+        const rawDate = dtstartMatch[1];
+
+        const y = rawDate.slice(0, 4);
+        const m = rawDate.slice(4, 6);
+        const d = rawDate.slice(6, 8);
+
+        const dateKey = `${y}-${m}-${d}`;
+
+        const summary = summaryMatch[1].trim();
+
+        let description = "";
+
+        if (descriptionMatch) {
+          description = descriptionMatch[1]
+            .replace(/\\n/g, "\n")
+            .replace(/<br\s*\/?>/gi, "\n")
+            .replace(/<a[^>]*>.*?<\/a>/gi, "")
+            .replace(/関連動画[\s\S]*/g, "")
+            .trim();
+        }
+
+        const card = document.querySelector(
+          `[data-date="${dateKey}"]`
+        );
+
+        if (!card) return;
+
+        const content = card.querySelector(".content");
+        content.innerHTML = "";
+
+        const summaryDiv = document.createElement("div");
+        summaryDiv.className = "summary";
+        summaryDiv.textContent = summary;
+
+        const descriptionDiv = document.createElement("div");
+        descriptionDiv.className = "description";
+        descriptionDiv.textContent = description;
+
+        content.appendChild(summaryDiv);
+        content.appendChild(descriptionDiv);
+      });
+    }
+    
+    loadCalendar();
+    
+  
+
+  </script>
+
+</body>
+</html>
