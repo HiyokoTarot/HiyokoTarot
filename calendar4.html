@@ -125,15 +125,11 @@
   <h1>🐣 開運ヒヨコ占い カレンダー 🐣</h1>
 
   <div class="month-nav">
-  （非公開） 先月
+ <a href="../calendar3.html">◀ 先月</a>
 
-  <span><b>2026年8月</b></span>
+  <span><b>2026年10月</b></span>
 
-  <a href="../calendar3.html">翌月 ▶</a>
-</div>
-
-  <div class="google-calendar">
-<iframe src="https://calendar.google.com/calendar/embed?src=sayakohiyokouranai%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  （未公開）翌月 ▶
 </div>
 
 <div class="download-buttons">
@@ -153,7 +149,7 @@
 
   <script>
     const year = 2026;
-    const month = 8;
+    const month = 10;
 
     const calendarList = document.getElementById("calendarList");
 
@@ -277,7 +273,7 @@ async function loadCalendar()
 
   const link = document.createElement("a");
 
-  link.download = "開運ヒヨコ占い_2026年8月.png";
+  link.download = "開運ヒヨコ占い_2026年10月.png";
   link.href = canvas.toDataURL("image/png");
 
   link.click();
