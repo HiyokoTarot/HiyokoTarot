@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>開運ヒヨコ占い 縦カレンダー</title>
-
+   <title>ヒヨコ占い🐣開運カレンダー</title>
+<link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href=",/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="./site.webmanifest" />
   <style>
     body {
       font-family: sans-serif;
-      background: #f5f5f5;
+      background: #fdcac3;
       margin: 0;
       padding: 30px;
     }
@@ -42,11 +47,37 @@
       margin-bottom: 8px;
     }
 
-    .summary {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
+.summary {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: white;
+  background: #9b59b6;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* 5段階の色 */
+.summary.rank-best {
+  background: #e60000;
+}
+
+.summary.rank-good {
+  background: #f15bc7;
+}
+
+.summary.rank-normal {
+  background: #159b0d;
+}
+
+.summary.rank-caution {
+  background: #ff9500;
+}
+
+.summary.rank-danger {
+  background: #1957ca;
+}
 
     .description {
       font-size: 14px;
@@ -122,7 +153,7 @@
 
 <body>
 
-  <h1>🐣 開運ヒヨコ占い カレンダー 🐣</h1>
+  <h1>🐣ヒヨコ占い🐣開運カレンダー</h1>
 
   <div class="month-nav">
  <a href="calendar2.html">◀ 先月</a>
@@ -251,6 +282,17 @@ async function loadCalendar()
         const summaryDiv = document.createElement("div");
         summaryDiv.className = "summary";
         summaryDiv.textContent = summary;
+                if (summary.includes("絶好調")) {
+  summaryDiv.classList.add("rank-best");
+} else if (summary.includes("良い")) {
+  summaryDiv.classList.add("rank-good");
+} else if (summary.includes("ふつう")) {
+  summaryDiv.classList.add("rank-normal");
+} else if (summary.includes("要注意")) {
+  summaryDiv.classList.add("rank-danger");
+} else if (summary.includes("注意")) {
+  summaryDiv.classList.add("rank-caution");
+}
 
         const descriptionDiv = document.createElement("div");
         descriptionDiv.className = "description";
