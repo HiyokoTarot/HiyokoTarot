@@ -286,18 +286,18 @@ async function loadCalendar()
         const summaryDiv = document.createElement("div");
         summaryDiv.className = "summary";
         summaryDiv.textContent = summary;
-        if (summary.includes("絶好調")) {
+        if (summary.includes("🎉")) {
   summaryDiv.classList.add("rank-best");
 }
-else if (["開運日"].some(word => summary.includes(word))) {
+else if (summary.includes("🍀")) {
   summaryDiv.classList.add("rank-daikaiun");
 }
 
-else if (["焦", "恐", "一方", "怖", "無茶", "無理", "注意", "マイペース", "気を付けて", "崩れ"].some(word => summary.includes(word))) {
-  summaryDiv.classList.add("rank-danger");
-} 
+else if (summary.includes("⚠️")) {
+  summaryDiv.classList.add("rank-caution");
+}
 
-else if (["己巳", "一粒万倍日", "天赦日", "寅の日", "甲子", "立秋", "立春", "夏至", "冬至"].some(word => summary.includes(word))) {
+else if (["🌾", "🐭", "🐯", "🐍", "天赦日", "🌸", "🎐", "🍂", "⛄", "🪴"].some(word => summary.includes(word)))  {
   summaryDiv.classList.add("rank-season");
 } 
 
