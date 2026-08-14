@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="robots" content="noindex, nofollow">
   <title>ヒヨコ占い🐣開運カレンダー</title>
 <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
@@ -52,7 +52,7 @@
   padding: 6px 14px;
   border-radius: 999px;
   color: white;
-  background: #9b59b6;
+  background: #ffb341;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 8px;
@@ -60,19 +60,19 @@
 
 /* 5段階の色 */
 .summary.rank-best {
-  background: #e60000;
+  background: #e60060;
 }
 
-.summary.rank-good {
-  background: #f15bc7;
+.summary.rank-daikaiun {
+  background: #ff8a04;
 }
 
-.summary.rank-normal {
+.summary.rank-moon {
+  background: #8e44ca;
+}
+
+.summary.rank-season {
   background: #159b0d;
-}
-
-.summary.rank-caution {
-  background: #ff9500;
 }
 
 .summary.rank-danger {
@@ -282,17 +282,24 @@ async function loadCalendar()
         const summaryDiv = document.createElement("div");
         summaryDiv.className = "summary";
         summaryDiv.textContent = summary;
-                if (summary.includes("絶好調")) {
+        if (summary.includes("絶好調")) {
   summaryDiv.classList.add("rank-best");
-} else if (summary.includes("良い")) {
-  summaryDiv.classList.add("rank-good");
-} else if (summary.includes("ふつう")) {
-  summaryDiv.classList.add("rank-normal");
-} else if (summary.includes("要注意")) {
-  summaryDiv.classList.add("rank-danger");
-} else if (summary.includes("注意")) {
-  summaryDiv.classList.add("rank-caution");
 }
+else if (["開運日"].some(word => summary.includes(word))) {
+  summaryDiv.classList.add("rank-daikaiun");
+}
+
+else if (["焦", "恐", "一方", "怖", "無茶", "無理", "注意", "マイペース", "気を付けて", "崩れ"].some(word => summary.includes(word))) {
+  summaryDiv.classList.add("rank-danger");
+} 
+
+else if (["己巳", "一粒万倍日", "天赦日", "寅の日", "甲子", "立秋", "立春", "夏至", "冬至"].some(word => summary.includes(word))) {
+  summaryDiv.classList.add("rank-season");
+} 
+
+else if (["満月", "新月", "上弦", "下弦"].some(word => summary.includes(word))) {
+  summaryDiv.classList.add("rank-moon");
+} 
 
         const descriptionDiv = document.createElement("div");
         descriptionDiv.className = "description";
