@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+   <title>ヒヨコ占い🐣開運カレンダー</title>
+<link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href=",/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="./site.webmanifest" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fdcac3;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .controls {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .calendar-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .day-card {
+      background: white;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .date {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+.summary {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: white;
+  background: #ffb341;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* 5段階の色 */
+.summary.rank-best {
+  background: #e60060;
+}
+
+.summary.rank-daikaiun {
+  background: #ff8a04;
+}
+
+.summary.rank-moon {
+  background: #8e44ca;
+}
+
+.summary.rank-season {
+  background: #159b0d;
+}
+
+.summary.rank-danger {
+  background: #1957ca;
+}
+
+    .description {
+      font-size: 14px;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    .empty {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .google-calendar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 30px;
+}
+
+.google-calendar iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 600px;
+}
+
+.download-buttons {
+  max-width: 700px;
+  margin: 20px auto;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #fff3b0;
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.download-btn:hover {
+  transform: translateY(-1px);
+}
+
+.month-nav {
+  max-width: 700px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.month-nav a {
+  text-decoration: none;
+  color: #4a7c2f;
+}
+
+.month-nav a:hover {
+  text-decoration: underline;
+}
+
+.koushiki {
+  text-align: center;
+}
+
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+  <h1>🐣ヒヨコ占い🐣開運カレンダー</h1>
+
+  <div class="month-nav">
+ <a href="Cal2026092HKi.html">◀ 先月</a>
+
+  <span><b>2026年10月</b></span>
+
+  <a href="Cal2026115Jhn.html">翌月 ▶</a>
+</div>
+
+<div class="download-buttons">
+  <a href="L5Tr.ics" download class="download-btn">
+    📅 iCalファイルをダウンロード
+  </a>
+
+  <button id="pngButton" class="download-btn">
+    🖼️ PNGで保存
+  </button>
+</div>
+
+  <div class="controls">
+  </div>
+
+  <div id="calendarList" class="calendar-list"></div>
+
+  <script>
+    const year = 2026;
+    const month = 10;
+
+    const calendarList = document.getElementById("calendarList");
+
+    function createDayCards() {
+      const lastDate = new Date(year, month, 0).getDate();
+
+      for (let day = 1; day <= lastDate; day++) {
+
+        const dateObj = new Date(year, month - 1, day);
+
+        const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
+        const weekday = weekdays[dateObj.getDay()];
+
+        const dateKey =
+          `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
+        const card = document.createElement("div");
+        card.className = "day-card";
+        card.dataset.date = dateKey;
+
+        const dateDiv = document.createElement("div");
+        dateDiv.className = "date";
+        dateDiv.textContent = `${month}月${day}日（${weekday}）`;
+
+        const contentDiv = document.createElement("div");
+        contentDiv.className = "content";
+
+        const emptyDiv = document.createElement("div");
+        emptyDiv.className = "empty";
+        emptyDiv.textContent = "—";
+
+        contentDiv.appendChild(emptyDiv);
+
+        card.appendChild(dateDiv);
+        card.appendChild(contentDiv);
+
+        calendarList.appendChild(card);
+      }
+    }
+
+    createDayCards();
+
+async function loadCalendar()
+
+{
+  const response = await fetch("L5Tr.ics");
+  let text = await response.text();
+
+      // ICSの折り返しを解除
+      text = text.replace(/\r?\n[ \t]/g, "");
+
+      const events = text.split("BEGIN:VEVENT").slice(1);
+
+      events.forEach(block => {
+
+        const dtstartMatch =
+          block.match(/DTSTART(?:;[^:]*)?:(\d{8})/);
+
+        const summaryMatch =
+          block.match(/SUMMARY:(.*)/);
+
+        const descriptionMatch =
+          block.match(/DESCRIPTION:(.*)/);
+
+        if (!dtstartMatch || !summaryMatch) return;
+
+        const rawDate = dtstartMatch[1];
+
+        const y = rawDate.slice(0, 4);
+        const m = rawDate.slice(4, 6);
+        const d = rawDate.slice(6, 8);
+
+        const dateKey = `${y}-${m}-${d}`;
+
+        const summary = summaryMatch[1].trim();
+
+        let description = "";
+
+        if (descriptionMatch) {
+          description = descriptionMatch[1]
+            .replace(/\\n/g, "\n")
+            .replace(/<br\s*\/?>/gi, "\n")
+            .replace(/<a[^>]*>.*?<\/a>/gi, "")
+            .replace(/関連動画[\s\S]*/g, "")
+            .trim();
+        }
+
+        const card = document.querySelector(
+          `[data-date="${dateKey}"]`
+        );
+
+
+
+        if (!card) return;
+
+        const content = card.querySelector(".content");
+        content.innerHTML = "";
+
+        const summaryDiv = document.createElement("div");
+        summaryDiv.className = "summary";
+        summaryDiv.textContent = summary;
+        if (summary.includes("🎉")) {
+  summaryDiv.classList.add("rank-best");
+}
+else if (summary.includes("🍀")) {
+  summaryDiv.classList.add("rank-daikaiun");
+}
+
+else if (summary.includes("⚠️")) {
+  summaryDiv.classList.add("rank-danger");
+}
+
+else if (["🌾", "🐭", "🐯", "🐍", "天赦日", "🌸", "🎐", "🍂", "⛄", "🪴"].some(word => summary.includes(word)))  {
+  summaryDiv.classList.add("rank-season");
+} 
+
+else if (["満月", "新月", "上弦", "下弦"].some(word => summary.includes(word))) {
+  summaryDiv.classList.add("rank-moon");
+} 
+
+        const descriptionDiv = document.createElement("div");
+        descriptionDiv.className = "description";
+        descriptionDiv.textContent = description;
+
+        content.appendChild(summaryDiv);
+        content.appendChild(descriptionDiv);
+      });
+    }
+    
+    loadCalendar();
+    document.getElementById("pngButton").addEventListener("click", async function() {
+
+  const target = document.querySelector(".calendar-list");
+
+  const canvas = await html2canvas(target, {
+    scale: 2,
+    backgroundColor: "#f5f5f5"
+  });
+
+  const link = document.createElement("a");
+
+  link.download = "開運ヒヨコ占い_2026年9月.png";
+  link.href = canvas.toDataURL("image/png");
+
+  link.click();
+});
+  
+
+  </script>
+<br><div class="koushiki">
+<a href="https://hiyokotarot.github.io/HiyokoTarot/">開運ヒヨコ占い🐣公式サイトへ行ってみる</a>
+</div>
+</body>
+</html>
