@@ -71,8 +71,7 @@
 
       { number: 36, name: "☷☲地火明夷（ちかめいい）", emoji: "🌱🔥", keyword: "日の入り、光を隠す・傷つき・忍耐", lines: [1,0,1,0,0,0], message: "無理は禁物、自分のペースを守ること", image: "./eki/36ChiKameii.png" },
 
-      { number: 37, name: "☴☲風火家人（ふうかかじん）", emoji: "🍃🔥", keyword: "家族・役割・内側を整える", lines: [1,0,1,0,1,1], message: "帰る場所を整えることで、外側の運も整い始めるよ🐣
-<br>自分の持ち場を大切に守るのも大事", image: "./eki/37FuKakajin.png" },
+      { number: 37, name: "☴☲風火家人（ふうかかじん）", emoji: "🍃🔥", keyword: "家族・役割・内側を整える", lines: [1,0,1,0,1,1], message: "帰る場所を整えることで、外側の運も整い始めるよ🐣<br>自分の持ち場を大切に守るのも大事", image: "./eki/37FuKakajin.png" },
 
       { number: 38, name: "☲☱火沢睽（かたくけい）", emoji: "🔥🫧", keyword: "違い・反目・別々の視点", lines: [1,1,0,1,0,1], message: "考えの違いが見えやすい日。無理に一致させず、違うから見えるものを探して。", image: "./eki/38KaTakukei.png" },
 
