@@ -111,7 +111,7 @@ export  const kamigamis = [
       },
       { number: 19,
         emoji: "✋",
-        name: "観音菩薩 かんのんぼさつ", image: "./kamigami/Kannon.png",
+        name: "観音菩薩 かんのんぼさつ", image: "./kamigami/19Kannon.png",
         keyword: "慈悲 救い 微笑み 向き合う",
         message: "きみを助けるたくさんの手があるよ<br>心配しないでその手を握ってごらん"
       },
