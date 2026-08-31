@@ -41,7 +41,7 @@
 
       { number: 21, name: "☲☳火雷噬嗑（からいぜいごう）", emoji: "🔥⚡", keyword: "噛み砕く・解決・障害突破", lines: [1,0,0,1,0,1], message: "避けていた問題に向き合う時。ひと口で飲み込まず、細かく分ければ解決できます。", image: "./eki/21KaRaizeigo.png" },
 
-      { number: 22, name: "☶☲山火賁（さんかひ）", emoji: "⛰️🔥", keyword: "飾る・美しさ・整える", lines: [1,0,1,0,0,1], message: "見せ方を整えると運が上がります。中身を偽るのではなく、魅力が伝わる形に磨いて。", image: "./eki/22Sankahi.png" },
+      { number: 22, name: "☶☲山火賁（さんかひ）", emoji: "⛰️🔥", keyword: "飾る・美しさ・整える", lines: [1,0,1,0,0,1], message: "見せ方を整えると運が上がります。中身を偽るのではなく、魅力が伝わる形に磨いて。", image: "./eki/22SanKahi.png" },
 
       { number: 23, name: "☶☷山地剥（さんちはく）", emoji: "⛰️🌱", keyword: "削ぎ落とし・崩れ・手放し", lines: [0,0,0,0,0,1], message: "不要なものが剥がれ落ちる時。失うように見えても、身軽になるための整理かもしれません。", image: "./eki/23SanChihaku.png" },
 
@@ -85,7 +85,7 @@
 
       { number: 43, name: "☱☰沢天夬（たくてんかい）", emoji: "🫧☁️", keyword: "決断・断つ・宣言", lines: [1,1,1,1,1,0], message: "はっきり決める時。ただし怒りで切るのではなく、明るい覚悟をもって選んで。", image: "./eki/43TakuTenkai.png" },
 
-      { number: 44, name: "☰☴天風姤（てんぷうこう）", emoji: "☁️🍃", keyword: "出会い・誘惑・突然の接触", lines: [0,1,1,1,1,1], message: "思いがけない出会いや知らせがありそう。魅力的なものほど、距離感をよく見て。", image: "./eki/44TenPuko.png" },
+      { number: 44, name: "☰☴天風姤（てんぷうこう）", emoji: "☁️🍃", keyword: "出会い・誘惑・突然の接触", lines: [0,1,1,1,1,1], message: "思いがけない出会いや知らせがありそう。<br>突然やってきたものは不用意に取り込まないこと", image: "./eki/44TenPuko.png" },
 
       { number: 45, name: "☱☷沢地萃（たくちすい）", emoji: "🫧🌱", keyword: "集まる・人気・共同体", lines: [0,0,0,1,1,0], message: "人や情報が集まりやすい日。場を整え、目的を明確にすると良い力になります。", image: "./eki/45TakuChisui.png" },
 
