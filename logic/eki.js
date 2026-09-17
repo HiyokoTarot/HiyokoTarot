@@ -9,7 +9,7 @@
 
       { number: 5, name: "☵☰水天需（すいてんじゅ）", emoji: "💧☁️", keyword: "待つ・準備・時を待つ", lines: [1,1,1,0,1,0], message: "今は無理に押し切るより、待つことで流れが整います。準備をしながら、良いタイミングを見極めて。", image: "./eki/05SuiTenju.png" },
 
-      { number: 6, name: "☰☵天水訟（てんすいしょう）", emoji: "☁️💧", keyword: "争い・主張・すれ違い", lines: [0,1,0,1,1,1], message: "意見の衝突に注意。正しさだけで押すより、引き際を見極めると大きな消耗を避けられます。", image: "./eki/06TenSuisho.png" },
+      { number: 6, name: "☰☵天水訟（てんすいしょう）", emoji: "☁️💧", keyword: "争い・主張・すれ違い", lines: [0,1,0,1,1,1], message: "主張が食い違って、話し合いがまとまらないかも<br>でも、どちらも正しいみたい", image: "./eki/06TenSuisho.png" },
 
       { number: 7, name: "☷☵地水師（ちすいし）", emoji: "🌱💧", keyword: "統率・秩序・チーム", lines: [0,1,0,0,0,0], message: "感情よりルールと役割を整える日。自分の中の指揮官を起こし、落ち着いて采配して。", image: "./eki/07ChiSuishi.png" },
 
@@ -73,7 +73,7 @@
 
       { number: 37, name: "☴☲風火家人（ふうかかじん）", emoji: "🍃🔥", keyword: "家族・役割・内側を整える", lines: [1,0,1,0,1,1], message: "帰る場所を整えることで、外側の運も整い始めるよ🐣<br>自分の持ち場を大切に守るのも大事", image: "./eki/37FuKakajin.png" },
 
-      { number: 38, name: "☲☱火沢睽（かたくけい）", emoji: "🔥🫧", keyword: "違い・反目・別々の視点", lines: [1,1,0,1,0,1], message: "考えの違いが見えやすい日。無理に一致させず、違うから見えるものを探して。", image: "./eki/38KaTakukei.png" },
+      { number: 38, name: "☲☱火沢睽（かたくけい）", emoji: "🔥🫧", keyword: "違い・別々の視点", lines: [1,1,0,1,0,1], message: "考えの違いが見えやすい日。無理に一致させず、違うから見えるものを探して。", image: "./eki/38KaTakukei.png" },
 
       { number: 39, name: "☵☶水山蹇（すいざんけん）", emoji: "💧⛰️", keyword: "困難・足止め・迂回", lines: [0,0,1,0,1,0], message: "正面突破が難しい時。遠回りや相談が助けになります。止まることにも意味があります。", image: "./eki/39SuiZanken.png" },
 
@@ -91,7 +91,7 @@
 
       { number: 46, name: "☷☴地風升（ちふうしょう）", emoji: "🌱🍃", keyword: "上昇・成長・積み上げ", lines: [0,1,1,0,0,0], message: "一気にではなく、段階を踏んで上がる時。地道な努力がちゃんと上へつながっています。", image: "./eki/46ChiFusho.png" },
 
-      { number: 47, name: "☱☵沢水困（たくすいこん）", emoji: "🫧💧", keyword: "困窮・疲労・内面の強さ", lines: [0,1,0,1,1,0], message: "苦しさを感じやすい時。でも、言葉にできない中にも芯は残っています。今日は休息も選択肢に。", image: "./eki/47TakuSuikon.png" },
+      { number: 47, name: "☱☵沢水困（たくすいこん）", emoji: "🫧💧", keyword: "困窮・疲労・内面の強さ", lines: [0,1,0,1,1,0], message: "力を発揮したくても発揮できない、行き詰って身動きが取れない<br>でも、その中にも希望は残っているよ", image: "./eki/47TakuSuikon.png" },
 
       { number: 48, name: "☵☴水風井（すいふうせい）", emoji: "💧🍃", keyword: "井戸・源泉・変わらぬ支え", lines: [0,1,1,0,1,0], message: "あなたの中の井戸を整える日。基本に戻ると、必要な水はちゃんと湧いてきます。", image: "./eki/48SuiFusei.png" },
 
