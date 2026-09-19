@@ -16,9 +16,12 @@ const fs = require("fs");
 // 計算する日時
 // 2026年9月19日 12:00 日本時間
 // ================================
+
 const now = new Date();
 
-const japanDate = new Intl.DateTimeFormat("en-CA", {
+const inputDate = process.argv[2];
+
+const japanDate = inputDate || new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
   month: "2-digit",
@@ -419,14 +422,18 @@ function makeResultData(result, rank) {
   const level = getScoreLevel(result.score);
 
   const aspectData = details.map(detail => ({
-    planet: planetLabels[detail.planet],
-    aspect: aspectLabels[detail.aspect],
-    orb: Number(detail.orb.toFixed(2)),
-    score: Number(detail.score.toFixed(2)),
-    meaning: aspectComments[detail.planet][detail.aspect]
-  }));
+  planet: planetLabels[detail.planet],
+  planetKey: detail.planet,
 
-  const comment = makeComment(level, aspectData);
+  aspect: aspectLabels[detail.aspect],
+  aspectKey: detail.aspect,
+
+  orb: Number(detail.orb.toFixed(2)),
+  score: Number(detail.score.toFixed(2)),
+  meaning: aspectComments[detail.planet][detail.aspect]
+}));
+
+  const comment = makeComment(level, aspectData, rank);
 
   return {
     rank: rank,

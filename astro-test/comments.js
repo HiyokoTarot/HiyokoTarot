@@ -66,7 +66,58 @@ Jupiter: {
 }
 };
 
-function makeComment(level, aspects) {
+// ================================
+// コメントに採用するアスペクトを選ぶ
+// ================================
+
+function selectMainAspect(aspects, rank) {
+
+  // 惑星の優先順位
+  const planetPriority = {
+    Jupiter: 5,
+    Mars: 4,
+    Venus: 3,
+    Mercury: 2,
+    Moon: 1
+  };
+
+  // 1位と12位でアスペクトの優先順位を変える
+  const aspectPriority = rank === 1
+    ? {
+        conjunction: 3,
+        trine: 2,
+        sextile: 1
+      }
+    : {
+        square: 2,
+        opposition: 1
+      };
+
+  // 今回使いたいアスペクトだけ残す
+  const candidates = aspects.filter(
+    aspect => aspectPriority[aspect.aspectKey] !== undefined
+  );
+
+  // 優先順位で並べる
+  candidates.sort((a, b) => {
+
+    // まずアスペクトを優先
+    const aspectDifference =
+      aspectPriority[b.aspectKey] - aspectPriority[a.aspectKey];
+
+    if (aspectDifference !== 0) {
+      return aspectDifference;
+    }
+
+    // 同じアスペクトなら惑星で決める
+    return planetPriority[b.planetKey] - planetPriority[a.planetKey
+    ];
+  });
+
+  return candidates[0];
+}
+
+function makeComment(level, aspects, rank) {
 
   // アスペクトを影響の強い順に並べる
   const sortedAspects = [...aspects].sort(
@@ -74,11 +125,18 @@ function makeComment(level, aspects) {
   );
 
   // 一番影響の強いアスペクト
-  const main = sortedAspects[0];
+  const main = selectMainAspect(aspects, rank);
 
   if (!main) {
     return level;
   }
+
+  const oldMain = [...aspects].sort(
+  (a, b) => Math.abs(b.score) - Math.abs(a.score)
+)[0];
+
+console.log("旧方式:", oldMain);
+console.log("新方式:", main);
 
   return `${level} ${main.meaning}`;
 }
