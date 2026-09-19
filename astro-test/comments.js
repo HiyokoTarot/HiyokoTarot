@@ -26,11 +26,11 @@ function getScoreLevel(score) {
 const aspectComments = {
 
   Moon: {
-    conjunction: "思い通りに動けるぜ",
-    sextile: "気持ちに余裕が生まれやすいぞ",
-    square: "うまくいかなくてイライラ",
-    trine: "流れに乗りやすいな",
-    opposition: "他の考え方も取り入れようぜ"
+    conjunction: "思い通りに動けるぜ<br>今の気分にピッタリな曲を探せ！",
+    sextile: "気持ちに余裕が生まれやすいぞ<br>お気に入りのプレイリストをのんびり楽しもう",
+    square: "うまくいかなくてイライラ<br>バラードを聴いてまずは深呼吸",
+    trine: "流れに乗りやすいな<br>テンポのいい曲でその流れをキャッチだ！",
+    opposition: "他の考え方も取り入れようぜ<br>普段聞かないジャンルを試してみよう"
   },
 
   Mercury: {
