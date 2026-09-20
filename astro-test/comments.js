@@ -4,18 +4,18 @@
 
 function getScoreLevel(score) {
   if (score >= 4) {
-    return "絶好調な一日🎉";
+    return "絶好調な一日だ！🎉";
   }
 
   if (score >= 0) {
-    return "色んなことがうまくいきそう🎶";
+    return "うまくいきそうだぞ🎶";
   }
 
   if (score > -4) {
-    return "焦らなければOK👍";
+    return "焦らなければOKだぜ👍";
   }
 
-  return "今日はちょっと注意💦";
+  return "ちょっと注意だな💦";
 }
 
 
@@ -64,6 +64,25 @@ Jupiter: {
   trine: "大きく発展しやすいね<br>仲間を誘って対バンやろうぜ！",
   opposition: "可能性を広げろ<br>やりたかったけど挑戦できてないこと、ない？"
 }
+};
+
+// ================================
+// 天体 × ハウスの意味
+// ================================
+
+const houseComments = {
+  1: "おまえ自身が",
+  2: "お金や時間の使い方で",
+  3: "なにかを調べる時に",
+  4: "家族や家のことで",
+  5: "趣味のことで",
+  6: "いつものルーティンで",
+  7: "相棒とのことで",
+  8: "誰かと深く関わる時に",
+  9: "出かけた時に",
+  10: "仕事で",
+  11: "仲間たちと一緒に",
+  12: "ひきこもり時間に"
 };
 
 // ================================
@@ -131,14 +150,9 @@ function makeComment(level, aspects, rank) {
     return level;
   }
 
-  const oldMain = [...aspects].sort(
-  (a, b) => Math.abs(b.score) - Math.abs(a.score)
-)[0];
+const houseComment = houseComments[main.house] || "";
 
-console.log("旧方式:", oldMain);
-console.log("新方式:", main);
-
-  return `${level} ${main.meaning}`;
+return `${houseComment}${level}<br>${main.meaning}`;
 }
 
 

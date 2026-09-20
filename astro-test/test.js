@@ -104,6 +104,24 @@ const planetPositions = planets.map(([name, planet]) => {
   };
 });
 
+// ========================================
+// ソーラーハウス判定
+// ========================================
+
+function getSolarHouse(targetSignIndex, planetLongitude) {
+
+  const planetSignIndex = Math.floor(planetLongitude / 30);
+
+  const difference =
+    (planetSignIndex - targetSignIndex + 12) % 12;
+
+  return difference + 1;
+}
+
+// ========================================
+// 主要アスペクト表示
+// ========================================
+
 console.log("");
 console.log("【主要アスペクト】");
 console.log("------------------------------");
@@ -388,6 +406,22 @@ function showSignDetails(result) {
       `　${plus}${detail.score.toFixed(2)}点`
     );
   }
+
+  // ソーラーハウス表示
+  console.log("");
+  console.log("  【ソーラーハウス】");
+
+  for (const planet of planetPositions) {
+
+    const house = getSolarHouse(
+      signIndex,
+      planet.longitude
+    );
+
+    console.log(
+      `  ${planet.name}　${house}ハウス`
+    );
+  }
 }
 
 
@@ -421,17 +455,33 @@ function makeResultData(result, rank) {
 
   const level = getScoreLevel(result.score);
 
-  const aspectData = details.map(detail => ({
-  planet: planetLabels[detail.planet],
-  planetKey: detail.planet,
+const aspectData = details.map(detail => {
 
-  aspect: aspectLabels[detail.aspect],
-  aspectKey: detail.aspect,
+  // このアスペクトを作っている天体の位置を取得
+  const planetPosition = scoringPlanetPositions.find(
+    planet => planet.name === detail.planet
+  );
 
-  orb: Number(detail.orb.toFixed(2)),
-  score: Number(detail.score.toFixed(2)),
-  meaning: aspectComments[detail.planet][detail.aspect]
-}));
+  // この星座から見て、その天体が何ハウスにいるか
+  const house = getSolarHouse(
+    signIndex,
+    planetPosition.longitude
+  );
+
+  return {
+    planet: planetLabels[detail.planet],
+    planetKey: detail.planet,
+
+    aspect: aspectLabels[detail.aspect],
+    aspectKey: detail.aspect,
+
+    house: house,
+
+    orb: Number(detail.orb.toFixed(2)),
+    score: Number(detail.score.toFixed(2)),
+    meaning: aspectComments[detail.planet][detail.aspect]
+  };
+});
 
   const comment = makeComment(level, aspectData, rank);
 
