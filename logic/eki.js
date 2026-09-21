@@ -1,5 +1,5 @@
     const hexagrams = [
-      { number: 1, name: "☰☰乾為天（けんいてん）", emoji: "☁️☁️", keyword: "創造・勢い・前進", lines: [1,1,1,1,1,1], message: "強い追い風！自分から動けばきっと高く飛べる<br>勢いがあるからこそ、方向を見失わないでね", image: "./eki/01Keniten.png" },
+      { number: 1, name: "☰☰乾為天（けんいてん）", emoji: "☁️☁️", keyword: "創造・勢い・前進", lines: [1,1,1,1,1,1], message: "強い追い風！自分から動けばきっと高く飛べる<br>勢いがあるからこそ、方向を見失わないでね", image: "./eki/01KeniTen.png" },
 
       { number: 2, name: "☷☷坤為地（こんいち）", emoji: "🌱🌱", keyword: "受容・育成・支え", lines: [0,0,0,0,0,0], message: "大地はちゃんと支えてくれているよ。<br>地面に根を張るように、焦らず一歩ずつ進もう", image: "./eki/02KoniChi.png" },
 
@@ -11,15 +11,15 @@
 
       { number: 6, name: "☰☵天水訟（てんすいしょう）", emoji: "☁️💧", keyword: "争い・主張・すれ違い", lines: [0,1,0,1,1,1], message: "主張が食い違って、話し合いがまとまらないかも<br>でも、どちらも正しいみたい", image: "./eki/06TenSuisho.png" },
 
-      { number: 7, name: "☷☵地水師（ちすいし）", emoji: "🌱💧", keyword: "統率・秩序・チーム", lines: [0,1,0,0,0,0], message: "感情よりルールと役割を整える日。自分の中の指揮官を起こし、落ち着いて采配して。", image: "./eki/07ChiSuishi.png" },
+      { number: 7, name: "☷☵地水師（ちすいし）", emoji: "🌱💧", keyword: "統率・秩序・チーム", lines: [0,1,0,0,0,0], message: "整然とルール・役割を采配するとき<br>大きな力をまとめるには、力強く落ち着いた指揮官が必要", image: "./eki/07ChiSuishi.png" },
 
-      { number: 8, name: "☵☷水地比（すいちひ）", emoji: "💧🌱", keyword: "親しむ・協力・つながり", lines: [0,0,0,0,1,0], message: "ひとりで抱え込まないで。信頼できる人とつながることで、安心と流れが戻ってきます。", image: "./eki/08SuiChihi.png" },
+      { number: 8, name: "☵☷水地比（すいちひ）", emoji: "💧🌱", keyword: "親しむ・協力・つながり・助け合う", lines: [0,0,0,0,1,0], message: "水のある所に集まってきたみんなが、仲間になるよ<br>親しい仲間と協力しよう", image: "./eki/08SuiChihi.png" },
 
       { number: 9, name: "☴☰風天小畜（ふうてんしょうちく）", emoji: "🍃☁️", keyword: "小さく蓄える・調整・控えめな前進", lines: [1,1,1,0,1,1], message: "大きく動くより、小さく整える時。細部の修正や準備が、後の成果につながります。", image: "./eki/09FutTenshochiku.png" },
 
       { number: 10, name: "☰☱天沢履（てんたくり）", emoji: "☁️🫧", keyword: "礼節・慎重・足元を見る", lines: [1,1,0,1,1,1], message: "慎重さが身を守ります。強い相手や大きな流れの中でも、礼と手順を守れば進めます。", image: "./eki/10TenTakuri.png" },
 
-      { number: 11, name: "☷☰地天泰（ちてんたい）", emoji: "🌱☁️", keyword: "安泰・調和・通じる", lines: [1,1,1,0,0,0], message: "上下が通じ、物事がなめらかに進みやすい時。感謝と分かち合いを忘れないで。", image: "./eki/11ChiTentai.png" },
+      { number: 11, name: "☷☰地天泰（ちてんたい）", emoji: "🌱☁️", keyword: "安泰・調和・通じる", lines: [1,1,1,0,0,0], message: "天地が通じて循環し、物事がなめらかに進みやすい時<br>この流れを活かして素直に育てよう", image: "./eki/11ChiTentai.png" },
 
       { number: 12, name: "☰☷天地否（てんちひ）", emoji: "☁️🌱", keyword: "停滞・閉塞・通じない", lines: [0,0,0,1,1,1], message: "今は通じにくさを感じるかも。無理に突破するより、距離を置き、内側を整えるのが吉。", image: "./eki/12TenChihi.png" },
 
@@ -47,7 +47,7 @@
 
       { number: 24, name: "☷☳地雷復（ちらいふく）", emoji: "🌱⚡", keyword: "回復・帰る・再出発、冬至", lines: [1,0,0,0,0,0], message: "流れが戻ってきます。大きく跳ねるより、まずは原点へ。小さな再開に福があります。", image: "./eki/24ChiRaihuku.png" },
 
-      { number: 25, name: "☰☳天雷无妄（てんらいむもう）", emoji: "☁️⚡", keyword: "自然体・無心・余計な作為をしない", lines: [1,0,0,1,1,1], message: "無理に飾らず、自然体でいることが鍵。欲をかきすぎるより、まっすぐな行動が道を開きます。", image: "./eki/25TenRaimumo.png" },
+      { number: 25, name: "☰☳天雷无妄（てんらいむもう）", emoji: "☁️⚡", keyword: "自然体・無心・余計な作為をしない", lines: [1,0,0,1,1,1], message: "予想外のことが起きても、自然体で対処しよう<br>余計な思惑を入れないことが大切", image: "./eki/25TenRaimumo.png" },
 
       { number: 26, name: "☶☰山天大畜（さんてんたいちく）", emoji: "⛰️☁️", keyword: "大きく蓄える・鍛錬・力をためる", lines: [1,1,1,0,0,1], message: "今は力をためる時。すぐ使い切らず、知識や経験を蓄えるほど後で強くなれます。", image: "./eki/26SanTentaichiku.png" },
 
@@ -61,7 +61,7 @@
 
       { number: 31, name: "☱☶沢山咸（たくざんかん）", emoji: "🫧⛰️", keyword: "感応・恋愛・心が動く", lines: [0,0,1,1,1,0], message: "心がふれる出来事がありそう。無理に言葉にしなくても、感じたことを大切に。", image: "./eki/31TakuZankan.png" },
 
-      { number: 32, name: "☳☴雷風恒（らいふうこう）", emoji: "⚡🍃", keyword: "継続・習慣・変わらぬ軸", lines: [0,1,1,1,0,0], message: "続ける力が運を育てます。派手さより、毎日の小さな安定が未来の支えになります。", image: "./eki/32RaiFuko.png" },
+      { number: 32, name: "☳☴雷風恒（らいふうこう）", emoji: "⚡🍃", keyword: "継続・習慣・変わらぬ軸", lines: [0,1,1,1,0,0], message: "続けることに意味があるよ<br>状況に一喜一憂しないで、毎日の小さな安定を大事にしよう", image: "./eki/32RaiFuko.png" },
 
       { number: 33, name: "☰☶天山遯（てんざんとん）", emoji: "☁️⛰️", keyword: "退く・距離・撤退", lines: [0,0,1,1,1,1], message: "こちらが正しくても、真正面から立ち向かうほど消耗する時期<br>いったん距離を取って、好機をじっとうかがおう" , image: "./eki/33TenZanton.png"},
 
@@ -87,7 +87,7 @@
 
       { number: 44, name: "☰☴天風姤（てんぷうこう）", emoji: "☁️🍃", keyword: "出会い・誘惑・突然の接触", lines: [0,1,1,1,1,1], message: "思いがけない出会いや知らせがありそう。<br>突然やってきたものは不用意に取り込まないこと", image: "./eki/44TenPuko.png" },
 
-      { number: 45, name: "☱☷沢地萃（たくちすい）", emoji: "🫧🌱", keyword: "集まる・人気・共同体", lines: [0,0,0,1,1,0], message: "人や情報が集まりやすい日。場を整え、目的を明確にすると良い力になります。", image: "./eki/45TakuChisui.png" },
+      { number: 45, name: "☱☷沢地萃（たくちすい）", emoji: "🫧🌱", keyword: "集まる・人気・共同体", lines: [0,0,0,1,1,0], message: "人や情報が集まって盛んになるよ", image: "./eki/45TakuChisui.png" },
 
       { number: 46, name: "☷☴地風升（ちふうしょう）", emoji: "🌱🍃", keyword: "上昇・成長・積み上げ", lines: [0,1,1,0,0,0], message: "一気にではなく、段階を踏んで上がる時。地道な努力がちゃんと上へつながっています。", image: "./eki/46ChiFusho.png" },
 
@@ -121,7 +121,7 @@
 
       { number: 61, name: "☴☱風沢中孚（ふうたくちゅうふ）", emoji: "🍃🫧", keyword: "誠実・信頼・真心", lines: [1,1,0,0,1,1], message: "真心が伝わりやすい日。飾った言葉より、正直でやさしい言葉を選んで。", image: "./eki/61FuTakuchufu.png" },
 
-      { number: 62, name: "☳☶雷山小過（らいざんしょうか）", emoji: "⚡⛰️", keyword: "小さく過ぎる・慎重・控えめ", lines: [0,0,1,1,0,0], message: "大きな勝負より、小さな確認が大切。控えめに、丁寧に、足元を見て進みましょう。" , image: "./eki/62RaiZanshoka.png"},
+      { number: 62, name: "☳☶雷山小過（らいざんしょうか）", emoji: "⚡⛰️", keyword: "小さく進める・慎重・控えめ", lines: [0,0,1,1,0,0], message: "大きな勝負より、小さな確認が大切。控えめに、丁寧に、足元を見て進みましょう。" , image: "./eki/62RaiZanshoka.png"},
 
       { number: 63, name: "☵☲水火既済（すいかきせい）", emoji: "💧🔥", keyword: "完成・整う・油断注意", lines: [1,0,1,0,1,0], message: "ひとまず整っています。ただし完成後こそ油断しやすい時。最後の確認を丁寧に。" , image: "./eki/63SuiKakisei.png"},
 
