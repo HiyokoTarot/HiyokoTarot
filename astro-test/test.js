@@ -486,7 +486,7 @@ const aspectData = details.map(detail => {
 let comment;
 
 if (aspectData.length === 0) {
-  comment = "今日はほとんど問題がなさそうだ！";
+  comment = "今日はほとんど問題がなさそうだ！<br>好きなように行動しよう";
 } else {
 comment = makeComment(level, aspectData, result.score);
 }
