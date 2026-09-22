@@ -483,7 +483,13 @@ const aspectData = details.map(detail => {
   };
 });
 
-  const comment = makeComment(level, aspectData, rank);
+let comment;
+
+if (aspectData.length === 0) {
+  comment = "今日はほとんど問題がなさそうだ！";
+} else {
+  comment = makeComment(level, aspectData, rank);
+}
 
   return {
     rank: rank,
@@ -495,14 +501,18 @@ const aspectData = details.map(detail => {
   };
 }
 
+const allSigns = ranking.map((result, index) =>
+  makeResultData(result, index + 1)
+);
 
 const dailyResult = {
   date: date.toLocaleDateString("ja-JP", {
     timeZone: "Asia/Tokyo"
   }),
 
-  first: makeResultData(firstPlace, 1),
-  last: makeResultData(lastPlace, 12)
+  first: allSigns[0],
+  last: allSigns[11],
+  ranking: allSigns
 };
 
 console.log("");
@@ -521,7 +531,13 @@ const publicResult = {
   last: {
     sign: dailyResult.last.sign,
     comment: dailyResult.last.comment
-  }
+  },
+
+  ranking: dailyResult.ranking.map(item => ({
+    rank: item.rank,
+    sign: item.sign,
+    comment: item.comment
+  }))
 };
 
 // VedakunUranai.json に保存
