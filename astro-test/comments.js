@@ -89,7 +89,7 @@ const houseComments = {
 // コメントに採用するアスペクトを選ぶ
 // ================================
 
-function selectMainAspect(aspects, rank) {
+function selectMainAspect(aspects, score) {
 
   // 惑星の優先順位
   const planetPriority = {
@@ -100,17 +100,18 @@ function selectMainAspect(aspects, rank) {
     Moon: 1
   };
 
-  // 1位と12位でアスペクトの優先順位を変える
-  const aspectPriority = rank === 1
-    ? {
-        conjunction: 3,
-        trine: 2,
-        sextile: 1
-      }
-    : {
-        square: 2,
-        opposition: 1
-      };
+// スコアがプラスなら良いアスペクト、
+// マイナスならハードアスペクトを優先
+const aspectPriority = score >= 0
+  ? {
+      conjunction: 3,
+      trine: 2,
+      sextile: 1
+    }
+  : {
+      square: 2,
+      opposition: 1
+    };
 
   // 今回使いたいアスペクトだけ残す
   const candidates = aspects.filter(
@@ -136,7 +137,7 @@ function selectMainAspect(aspects, rank) {
   return candidates[0];
 }
 
-function makeComment(level, aspects, rank) {
+function makeComment(level, aspects, score) {
 
   // アスペクトを影響の強い順に並べる
   const sortedAspects = [...aspects].sort(
@@ -144,7 +145,7 @@ function makeComment(level, aspects, rank) {
   );
 
   // 一番影響の強いアスペクト
-  const main = selectMainAspect(aspects, rank);
+  const main = selectMainAspect(aspects, score);
 
   if (!main) {
     return level;

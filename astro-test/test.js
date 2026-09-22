@@ -488,7 +488,7 @@ let comment;
 if (aspectData.length === 0) {
   comment = "今日はほとんど問題がなさそうだ！";
 } else {
-  comment = makeComment(level, aspectData, rank);
+comment = makeComment(level, aspectData, result.score);
 }
 
   return {
