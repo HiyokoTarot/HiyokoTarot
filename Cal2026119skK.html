@@ -168,7 +168,7 @@
 </div>
 
 <div class="download-buttons">
-  <a href="SayakoCal09L5Tr.ics" download class="download-btn">
+  <a href="SayakoCalSk7d.ics" download class="download-btn">
     📅 iCalファイルをダウンロード
   </a>
 
@@ -184,7 +184,7 @@
 
   <script>
     const year = 2026;
-    const month = 10;
+    const month = 11;
 
     const calendarList = document.getElementById("calendarList");
 
@@ -230,7 +230,7 @@
 async function loadCalendar()
 
 {
-  const response = await fetch("SayakoCal09L5Tr.ics");
+  const response = await fetch("SayakoCalSk7d.ics");
   let text = await response.text();
 
       // ICSの折り返しを解除
