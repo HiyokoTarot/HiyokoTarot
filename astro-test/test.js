@@ -523,16 +523,6 @@ console.log(JSON.stringify(dailyResult, null, 2));
 const publicResult = {
   date: dailyResult.date,
 
-  first: {
-    sign: dailyResult.first.sign,
-    comment: dailyResult.first.comment
-  },
-
-  last: {
-    sign: dailyResult.last.sign,
-    comment: dailyResult.last.comment
-  },
-
   ranking: dailyResult.ranking.map(item => ({
     rank: item.rank,
     sign: item.sign,
