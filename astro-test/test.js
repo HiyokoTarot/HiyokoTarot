@@ -636,7 +636,17 @@ comment = makeComment(level, aspectData, result.score);
     comment: comment,
     aspects: aspectData,
     work: getHouseFortune(signIndex, 10),
-    equipment: getHouseFortune(signIndex, 2)
+    equipment: getHouseFortune(signIndex, 2),
+    discovery: getHouseFortune(signIndex, 3),
+    home: getHouseFortune(signIndex, 4),
+    creation: getHouseFortune(signIndex, 5),
+    health: getHouseFortune(signIndex, 6),
+    partner: getHouseFortune(signIndex, 7),
+    awakening: getHouseFortune(signIndex, 8),
+    expedition: getHouseFortune(signIndex, 9),
+    work: getHouseFortune(signIndex, 10),
+    rock: getHouseFortune(signIndex, 11),
+    solo: getHouseFortune(signIndex, 12)
   };
 }
 
@@ -659,6 +669,12 @@ console.log("================================");
 console.log("【コメント生成用データ】");
 console.log(JSON.stringify(dailyResult, null, 2));
 
+function formatFortune(label, data) {
+  return data.comment
+    ? `${label}は${data.level}<br>${data.comment}`
+    : `${label}は${data.level}`;
+}
+
 const publicResult = {
   date: dailyResult.date,
 
@@ -667,13 +683,17 @@ const publicResult = {
     sign: item.sign,
     comment: item.comment,
 
-work: item.work.comment
-  ? `仕事運は${item.work.level}<br>${item.work.comment}`
-  : `仕事運は${item.work.level}`,
-
-equipment: item.equipment.comment
-  ? `楽器・機材運は${item.equipment.level}<br>${item.equipment.comment}`
-  : `楽器・機材運は${item.equipment.level}`
+    equipment: formatFortune("楽器・機材運", item.equipment),
+    discovery: formatFortune("音楽発見運", item.discovery),
+    home: formatFortune("引きこもり運", item.home),
+    creation: formatFortune("創作運", item.creation),
+    health: formatFortune("健康運", item.health),
+    partner: formatFortune("相棒運", item.partner),
+    awakening: formatFortune("覚醒運", item.awakening),
+    expedition: formatFortune("遠征運", item.expedition),
+    work: formatFortune("仕事運", item.work),
+    rock: formatFortune("ロック運", item.rock),
+    solo: formatFortune("ぼっち運", item.solo)
   }))
 };
 
