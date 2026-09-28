@@ -34,7 +34,7 @@ const aspectComments = {
   },
 
   Mercury: {
-    conjunction: "いいアイディアが思い付くぞ<br>今日一番最初にひらめいた曲がヒントだ！",
+    conjunction: "きっといいアイディアが思い付くぞ<br>今日一番最初にひらめいた曲がヒントだ！",
     sextile: "会話が弾むぜ<br>相手の好きな曲で一緒に盛り上がれ！",
     square: "思ってもないことを言っちゃうかも？<br>ヒーリング系を聴いて落ち着いたら、素直に謝ろう",
     trine: "欲しかった情報をゲット<br>ついでに欲しかった機材の情報もチェックだ！",
@@ -83,6 +83,92 @@ const houseComments = {
   10: "仕事で",
   11: "仲間たちと一緒に",
   12: "ひきこもり時間に"
+};
+
+// ================================
+// 仕事運コメント
+// ================================
+
+function getFortuneLevel(score) {
+  if (score >= 15) {
+    return "絶好調だぜ🔥";
+  }
+
+  if (score >= 5) {
+    return "いい感じだぜ🎶";
+  }
+
+  if (score > -5) {
+    return "特に問題なくいつも通りだぜ👍";
+  }
+
+  if (score > -15) {
+    return "少し慎重にいきたいぜ🤔";
+  }
+
+  return "無理しない方がよさそうだぜ💦";
+}
+
+const planetFortuneComments = {
+  "☉ 太陽": {
+    good: "力を発揮して注目を集めそうだぜ！",
+    hard: "自分のやり方をゴリ押さない方がよさそうだぜ",
+    neutral: "自分らしく取り組むとよさそうだぜ"
+  },
+
+  "☽ 月": {
+    good: "周りの空気を読むとうまくいきそうだぜ！",
+    hard: "周りに振り回されすぎないようにしようぜ",
+    neutral: "いつものペースで進めるとよさそうだぜ"
+  },
+
+  "☿ 水星": {
+    good: "頭の回転を活かせそうだぜ！",
+    hard: "確認不足や伝達ミスには気をつけようぜ",
+    neutral: "考えを整理してから動くとよさそうだぜ"
+  },
+
+  "♀ 金星": {
+    good: "周囲の人からいい話を聞けそうだぜ！",
+    hard: "周りの話はあまり気にしない方がよさそうだぜ",
+    neutral: "知り合いの話がヒントになりそうだぜ"
+  },
+
+  "♂ 火星": {
+    good: "思い切って行動すると結果につながりそうだぜ！",
+    hard: "勢いだけで動かない方がよさそうだぜ",
+    neutral: "やるべきことからどんどん片付けていこうぜ"
+  },
+
+  "♃ 木星": {
+    good: "チャンスが広がりそうだぜ！",
+    hard: "抱え込みすぎないようにしようぜ",
+    neutral: "少し先を見ながら進めるとよさそうだぜ"
+  },
+
+  "♄ 土星": {
+    good: "地道に取り組んできたことが、とうとう結果につながりそうだぜ！",
+    hard: "思うように進まなくても焦らず一つずつ片付けようぜ",
+    neutral: "今日はコツコツ進めるのが一番だぜ"
+  },
+
+  "♅ 天王星": {
+    good: "いつもと違うやり方を試すと面白そうだぜ！",
+    hard: "急な変更には慌てず対応しようぜ",
+    neutral: "ちょっとした工夫が楽にしてくれそうだぜ"
+  },
+
+  "♆ 海王星": {
+    good: "前からやりたかったことを形にできそうだぜ！",
+    hard: "曖昧なまま進めず、一度確認してから動こうぜ",
+    neutral: "イメージを少しずつ形にしていこうぜ"
+  },
+
+  "♇ 冥王星": {
+    good: "やり方を大きく変えるきっかけがありそうだぜ！",
+    hard: "無理に状況を変えようとせず、今できることに集中しようぜ",
+    neutral: "今までのやり方を見直してみるのもよさそうだぜ"
+  }
 };
 
 // ================================
@@ -156,10 +242,39 @@ const houseComment = houseComments[main.house] || "";
 return `${houseComment}${level}<br>${main.meaning}`;
 }
 
+// ================================
+// 仕事運：一番タイトなアスペクトを選ぶ
+// ================================
+
+function selectWorkMainAspect(planets) {
+  const candidates = [];
+
+  for (const planet of planets) {
+    for (const aspect of planet.aspects || []) {
+candidates.push({
+  workPlanet: planet.planet,
+  ...aspect
+});
+    }
+  }
+
+  if (candidates.length === 0) {
+    return null;
+  }
+
+  // オーブが小さい順
+  candidates.sort((a, b) => a.orb - b.orb);
+
+  return candidates[0];
+}
+
 
 // test.js から使えるようにする
 module.exports = {
   getScoreLevel,
   aspectComments,
-  makeComment
+  makeComment,
+  getFortuneLevel,
+  planetFortuneComments,
+  selectWorkMainAspect
 };

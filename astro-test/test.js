@@ -7,7 +7,10 @@ const {
 const {
   getScoreLevel,
   aspectComments,
-  makeComment
+  makeComment,
+  getFortuneLevel,
+  planetFortuneComments,
+  selectWorkMainAspect
 } = require("./comments");
 
 const fs = require("fs");
@@ -117,6 +120,8 @@ function getSolarHouse(targetSignIndex, planetLongitude) {
 
   return difference + 1;
 }
+
+
 
 // ========================================
 // 主要アスペクト表示
@@ -376,6 +381,153 @@ const aspectLabels = {
   opposition: "☍"
 };
 
+// ========================================
+// 仕事運・採点ルール
+// ========================================
+
+// 10ハウスに天体がいる場合の基本点
+const workPlanetScores = {
+  "☉ 太陽": 5,
+  "☽ 月": 2,
+  "☿ 水星": 3,
+  "♀ 金星": 3,
+  "♂ 火星": 4,
+  "♃ 木星": 5,
+  "♄ 土星": 3,
+  "♅ 天王星": 1,
+  "♆ 海王星": 2,
+  "♇ 冥王星": 1
+};
+
+// 10ハウス天体が作るアスペクトの基本点
+const workAspectScores = {
+  conjunction: 4,
+  sextile: 8,
+  square: -10,
+  trine: 10,
+  opposition: -6
+};
+
+function getPlanetAspects(targetPlanet) {
+  const result = [];
+
+  for (const otherPlanet of planetPositions) {
+
+    if (otherPlanet.name === targetPlanet.name) {
+      continue;
+    }
+
+    const difference = getAngleDifference(
+      targetPlanet.longitude,
+      otherPlanet.longitude
+    );
+
+    for (const aspect of scoringAspects) {
+      const orb = Math.abs(difference - aspect.angle);
+
+if (orb <= maxOrb) {
+
+  const baseScore = workAspectScores[aspect.name];
+
+  // orb 0° = 100%、orb 6° = 0%
+  const strength = 1 - (orb / maxOrb);
+
+  const score = baseScore * strength;
+
+  result.push({
+    planet: otherPlanet.name,
+    aspect: aspectLabels[aspect.name],
+    aspectKey: aspect.name,
+    orb: Number(orb.toFixed(2)),
+    score: Number(score.toFixed(2))
+  });
+
+  break;
+}
+    }
+  }
+
+  return result;
+}
+
+function getHouseFortune(signIndex, targetHouse) {
+  const workPlanets = [];
+  let totalScore = 0;
+
+  for (const planet of planetPositions) {
+
+    const house = getSolarHouse(
+      signIndex,
+      planet.longitude
+    );
+
+  if (house === targetHouse) {
+
+      // 10H在住天体そのものの基本点
+      const planetScore =
+        workPlanetScores[planet.name] || 0;
+
+      const planetAspects =
+        getPlanetAspects(planet);
+
+      // アスペクト補正の合計
+      const aspectScore = planetAspects.reduce(
+        (sum, aspect) => sum + aspect.score,
+        0
+      );
+
+      const score =
+        planetScore + aspectScore;
+
+      totalScore += score;
+
+      workPlanets.push({
+        planet: planet.name,
+        longitude: Number(planet.longitude.toFixed(2)),
+        house: house,
+
+        baseScore: planetScore,
+        aspectScore: Number(aspectScore.toFixed(2)),
+        score: Number(score.toFixed(2)),
+
+        aspects: planetAspects
+      });
+    }
+  }
+
+const workMainAspect = selectWorkMainAspect(workPlanets);
+
+const workLevel = getFortuneLevel(totalScore);
+
+let workPlanetComment = "";
+
+if (workMainAspect) {
+  const type =
+    workMainAspect.aspectKey === "square" ||
+    workMainAspect.aspectKey === "opposition"
+      ? "hard"
+      : "good";
+
+  workPlanetComment =
+    planetFortuneComments[workMainAspect.workPlanet]?.[type] || "";
+
+} else if (workPlanets.length > 0) {
+
+  const mainPlanet = workPlanets[0].planet;
+
+  workPlanetComment =
+    planetFortuneComments[mainPlanet]?.neutral || "";
+}
+
+return {
+  house: targetHouse,
+  score: Number(totalScore.toFixed(2)),
+  level: workLevel,
+  planets: workPlanets,
+  workMainAspect,
+  comment: workPlanetComment
+};
+}
 
 // 指定した星座の15°だけの内訳表示
 function showSignDetails(result) {
@@ -423,21 +575,6 @@ function showSignDetails(result) {
     );
   }
 }
-
-
-// ranking はすでに高得点順
-const firstPlace = ranking[0];
-const lastPlace = ranking[ranking.length - 1];
-
-console.log("");
-console.log("================================");
-console.log("🥇 1位の内訳");
-showSignDetails(firstPlace);
-
-console.log("");
-console.log("================================");
-console.log("🐣 12位の内訳");
-showSignDetails(lastPlace);
 
 
 // ========================================
@@ -497,7 +634,9 @@ comment = makeComment(level, aspectData, result.score);
     score: Number(result.score.toFixed(2)),
     level: level,
     comment: comment,
-    aspects: aspectData
+    aspects: aspectData,
+    work: getHouseFortune(signIndex, 10),
+    equipment: getHouseFortune(signIndex, 2)
   };
 }
 
@@ -526,7 +665,15 @@ const publicResult = {
   ranking: dailyResult.ranking.map(item => ({
     rank: item.rank,
     sign: item.sign,
-    comment: item.comment
+    comment: item.comment,
+
+work: item.work.comment
+  ? `仕事運は${item.work.level}<br>${item.work.comment}`
+  : `仕事運は${item.work.level}`,
+
+equipment: item.equipment.comment
+  ? `楽器・機材運は${item.equipment.level}<br>${item.equipment.comment}`
+  : `楽器・機材運は${item.equipment.level}`
   }))
 };
 
