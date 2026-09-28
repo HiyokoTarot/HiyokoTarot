@@ -8,7 +8,7 @@ function getScoreLevel(score) {
   }
 
   if (score >= 0) {
-    return "うまくいきそうだぞ🎶";
+    return "いいことがありそうだ🎶";
   }
 
   if (score > -4) {
@@ -99,19 +99,19 @@ function getFortuneLevel(score) {
   }
 
   if (score > -5) {
-    return "特に問題なくいつも通りだぜ👍";
+    return "いつも通りだぜ👍";
   }
 
   if (score > -15) {
-    return "少し慎重にいきたいぜ🤔";
+    return "ちょっぴりイマイチだぜ";
   }
 
-  return "無理しない方がよさそうだぜ💦";
+  return "あんまりよくないぜ💦";
 }
 
 const planetFortuneComments = {
   "☉ 太陽": {
-    good: "力を発揮して注目を集めそうだぜ！",
+    good: "自分の好きなようにやるとうまくいきそうだぜ！",
     hard: "自分のやり方をゴリ押さない方がよさそうだぜ",
     neutral: "自分らしく取り組むとよさそうだぜ"
   },
@@ -165,7 +165,7 @@ const planetFortuneComments = {
   },
 
   "♇ 冥王星": {
-    good: "やり方を大きく変えるきっかけがありそうだぜ！",
+    good: "普段していることを変えるきっかけがありそうだぜ！",
     hard: "無理に状況を変えようとせず、今できることに集中しようぜ",
     neutral: "今までのやり方を見直してみるのもよさそうだぜ"
   }
