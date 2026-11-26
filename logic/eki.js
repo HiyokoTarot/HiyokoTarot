@@ -65,7 +65,7 @@
 
       { number: 33, name: "☰☶天山遯（てんざんとん）", emoji: "☁️⛰️", keyword: "退く・距離・撤退", lines: [0,0,1,1,1,1], message: "こちらが正しくても、真正面から立ち向かうほど消耗する時期<br>いったん距離を取って、好機をじっとうかがおう" , image: "./eki/33TenZanton.png"},
 
-      { number: 34, name: "☳☰雷天大壮（らいてんたいそう）", emoji: "⚡☁️", keyword: "強い力・勢い・自制", lines: [1,1,1,1,0,0], message: "勢いがあります。ただし力が強い時ほど慎重に。正しい方向へ使えば大きく進めます。", image: "./eki/34KaChishin.png" },
+      { number: 34, name: "☳☰雷天大壮（らいてんたいそう）", emoji: "⚡☁️", keyword: "強い力・勢い・自制", lines: [1,1,1,1,0,0], message: "勢いがあります。ただし力が強い時ほど慎重に。正しい方向へ使えば大きく進めます。", image: "./eki/34RaiTentaiso.png" },
 
       { number: 35, name: "☲☷火地晋（かちしん）", emoji: "🔥🌱", keyword: "前進・昇る・認められる", lines: [0,0,0,1,0,1], message: "少しずつ光の方へ進んでいます。小さな成果を受け取り、自信に変えていきましょう。", image: "./eki/00Keniten.png" },
 
