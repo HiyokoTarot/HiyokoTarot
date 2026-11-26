@@ -67,7 +67,7 @@
 
       { number: 34, name: "☳☰雷天大壮（らいてんたいそう）", emoji: "⚡☁️", keyword: "強い力・勢い・自制", lines: [1,1,1,1,0,0], message: "勢いがあります。ただし力が強い時ほど慎重に。正しい方向へ使えば大きく進めます。", image: "./eki/34RaiTentaiso.png" },
 
-      { number: 35, name: "☲☷火地晋（かちしん）", emoji: "🔥🌱", keyword: "前進・昇る・認められる", lines: [0,0,0,1,0,1], message: "少しずつ光の方へ進んでいます。小さな成果を受け取り、自信に変えていきましょう。", image: "./eki/00Keniten.png" },
+      { number: 35, name: "☲☷火地晋（かちしん）", emoji: "🔥🌱", keyword: "前進・昇る・認められる", lines: [0,0,0,1,0,1], message: "少しずつ光の方へ進んでいます。小さな成果を受け取り、自信に変えていきましょう。", image: "./eki/35KaChishin.png" },
 
       { number: 36, name: "☷☲地火明夷（ちかめいい）", emoji: "🌱🔥", keyword: "日の入り、光を隠す・傷つき・忍耐", lines: [1,0,1,0,0,0], message: "無理は禁物、自分のペースを守ること", image: "./eki/36ChiKameii.png" },
 
@@ -93,11 +93,11 @@
 
       { number: 47, name: "☱☵沢水困（たくすいこん）", emoji: "🫧💧", keyword: "困窮・疲労・内面の強さ", lines: [0,1,0,1,1,0], message: "力を発揮したくても発揮できない、行き詰って身動きが取れない<br>でも、その中にも希望は残っているよ", image: "./eki/47TakuSuikon.png" },
 
-      { number: 48, name: "☵☴水風井（すいふうせい）", emoji: "💧🍃", keyword: "井戸・源泉・変わらぬ支え", lines: [0,1,1,0,1,0], message: "あなたの中の井戸を整える日。基本に戻ると、必要な水はちゃんと湧いてきます。", image: "./eki/48SuiFusei.png" },
+      { number: 48, name: "☵☴水風井（すいふうせい）", emoji: "💧🍃", keyword: "井戸・源泉・生活の基盤・人を養うもの・変わらない価値・自分の資源、才能", lines: [0,1,1,0,1,0], message: "町や人は変わっても、井戸はそこにあり続けて、必要な人に水を与える<br>才能や資源を活用しよう", image: "./eki/48SuiFusei.png" },
 
       { number: 49, name: "☱☲沢火革（たくかかく）", emoji: "🫧🔥", keyword: "改革・変化・刷新・古い殻を脱ぐ・方向転換", lines: [1,0,1,1,1,0], message: "古い服は脱ぎ捨てて、新しい姿に生まれ変わろう<br>境界を超えた瞬間、世界が変わる", image: "./eki/49TakuKakaku.png" },
 
-      { number: 50, name: "☲☴火風鼎（かふうてい）", emoji: "🔥🍃", keyword: "器・養う・新しい形", lines: [0,1,1,1,0,1], message: "素材を整え、新しい形に煮込む時。人にふるまえるものが、あなたの中で育っています。" , image: "./eki/50KaFutei.png"},
+      { number: 50, name: "☲☴火風鼎（かふうてい）", emoji: "🔥🍃", keyword: "器・養う・新しい形", lines: [0,1,1,1,0,1], message: "素材を整え、新しい形に煮込む時。人にふるまえるものが、あなたの中で育っています。新しい価値を生み出そう" , image: "./eki/50KaFutei.png"},
 
       { number: 51, name: "☳☳震為雷（しんいらい）", emoji: "⚡⚡", keyword: "衝撃・目覚め・驚き", lines: [1,0,0,1,0,0], message: "びっくりする出来事があっても、落ち着けば大丈夫。雷は目を覚ますために鳴ることもあります。", image: "./eki/51ShiniRai.png" },
 
