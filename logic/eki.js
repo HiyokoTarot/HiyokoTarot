@@ -15,7 +15,7 @@
 
       { number: 8, name: "☵☷水地比（すいちひ）", emoji: "💧🌱", keyword: "親しむ・協力・つながり・助け合う", lines: [0,0,0,0,1,0], message: "水のある所に集まってきたみんなが、仲間になるよ<br>親しい仲間と協力しよう", image: "./eki/08SuiChihi.png" },
 
-      { number: 9, name: "☴☰風天小畜（ふうてんしょうちく）", emoji: "🍃☁️", keyword: "小さく蓄える・調整・控えめな前進", lines: [1,1,1,0,1,1], message: "大きく動くより、小さく整える時。細部の修正や準備が、後の成果につながります。", image: "./eki/09FutTenshochiku.png" },
+      { number: 9, name: "☴☰風天小畜（ふうてんしょうちく）", emoji: "🍃☁️", keyword: "小さく蓄える・調整・控えめな前進", lines: [1,1,1,0,1,1], message: "大きく動くより、小さく整える時。細部の修正や準備が、後の成果につながります。", image: "./eki/09FuTenshochiku.png" },
 
       { number: 10, name: "☰☱天沢履（てんたくり）", emoji: "☁️🫧", keyword: "礼節・慎重・足元を見る", lines: [1,1,0,1,1,1], message: "慎重さが身を守ります。強い相手や大きな流れの中でも、礼と手順を守れば進めます。", image: "./eki/10TenTakuri.png" },
 
